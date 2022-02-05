@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap@5.0.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+     
+    
+    <!-- Animation.css -->  
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+  
+    <!-- CSS File -->
+    <link rel="stylesheet" href="/css/styles.css"/>
+  
+    <!-- JQUERY File -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+    <!-- Scroll Reveal -->
+    <!-- <script src="https://unpkg.com/@barba/core"></script> -->
+
+    <!-- <script src="https://unpkg.com/scrollreveal"></script>  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+   
+     -->
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+     <script src="/js/parallax.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="image/pem-logo-2.png">
+
+    <!-- Title -->
+    <title>Premium Events Management</title> 
+  </head>
+  <body data-barba="wrapper">
+
+    <header id=Navigation>
+      <!-- NavBar -->
+     <div class="container-xxl">       
+         <nav class="nav navbar navbar-expand-lg nav-light p-0 pt-4">
+           <span class="navbar-brand ms-3" href="/">
+            <img src="/image/pem-logo.png" class="logo"  style="display: none;" alt="logo">
+             <div class="grid-container-icon">
+              <div class="grid-item">
+                <a href="https://www.facebook.com/Premium-Events-Management-111872551406806"><img src="/image/icon/fb.png" class="social-icon logo" alt=""></a>
+              </div>
+              <div class="grid-item">
+                <a href="https://www.instagram.com/premiumeventsmanagement/?fbclid=IwAR2Rfd9hEBo6ZesgV_XdTFTuk39hna6XpLqAEJI9M74hh10yldXJmn4Fmp8"><img src="/image/icon/insta.png" class="social-icon logo" alt=""></a>
+              </div>
+              <div class="grid-item">
+                <a href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln.png" class="social-icon logo" alt=""></a>
+              </div>
+            </div>
+           </span>
+           <button class="navbar-toggler my-2 " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon container-icon" onclick="ChangeIcon(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </span>
+           </button>
+           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+             <ul class="navbar-nav nav-list align-items-center">
+               <li class="nav-item active ">
+                 <a class="nav-link nav-hover btn--animation-from-right" href="/">HOME</a>
+               </li>
+               <li class="nav-item">
+                 <!-- <a class="nav-link nav-hover" style="cursor: pointer;" onclick="smoothScroll(document.getElementById('About'))">ABOUT</a> -->
+                 <a class="nav-link nav-hover" href="/#About">ABOUT</a>
+               </li>
+               <li class="nav-item">
+                <a class="nav-link nav-hover" href="/#Concept">CONCEPTS</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link nav-hover" href="/">MEDIA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-hover" href="/">CAREERS</a>
+              </li>
+               <li class="nav-item">
+                 <a class="nav-link nav-hover" href="/#Contact">CONTACT US</a>
+               </li>
+             </ul>
+           </div>
+         </nav>
+   </div>
+   <!-- <nav class="navbar navbar-expand-lg navbar-light "> .bg-light bg-gradient -->
+
+    <!--  Show this only on mobile to medium screens  -->
+      <!-- <a class="navbar-brand d-lg-none" href="/">
+        <img src="image/pem-logo.png" class="logo" alt="logo">
+      </a>
+    
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+    
+    <!--  Use flexbox utility classes to change how the child elements are justified  -->
+      <!-- <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
+    
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link nav-hover" href="/">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link nav-hover" href="/">OUR PROJECT</a>
+         </li>
+          <li class="nav-item">
+           <a class="nav-link nav-hover" href="/">MEDIA</a>
+         </li>
+        </ul> -->
+        
+        
+    <!--   Show this only lg screens and up   -->
+        <!-- <a class="navbar-brand d-none d-lg-block" href="#">
+          <img src="image/pem-logo.png" class="logo" alt="logo">
+        </a>
+        
+        
+        
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link nav-hover" href="/">BRANDS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-hover" href="/">CAREER</a>
+          </li>
+           <li class="nav-item">
+             <a class="nav-link nav-hover" href="/">CONTACT US</a>
+           </li>
+        </ul>
+      </div>
+    </nav> -->
+   </header> 

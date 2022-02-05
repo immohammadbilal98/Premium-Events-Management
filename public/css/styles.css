@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+  }
+/* ===================================== CUSTOM CSS ============================================================*/
+
+/* TRANSITION */
+/* ul.transition {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+ul.transition li {
+  transform: scaleY(0);
+  background: white;
+  width: 20%;
+} */
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* background: linear-gradient(to left, #ba7453, #d1a984); */
+  background-color: #000000;
+  z-index: 1050;
+}
+
+/* Image-center */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* -------------------------------- */
+
+
+/* NAVIGATION --------------------------*/
+header {
+  height: 15vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* transition: background-color;
+  transition: background-color .5s ease; */
+  /* background-color: #ffffff00; */
+  /* background-image: linear-gradient(rgb(249 250 251),rgb(249 250 251 / 75%),rgb(249 250 251 / 50%),rgb(249 250 251 / 25%),rgb(249 250 251 / 0%)); */
+  background: rgba(0,0,0,.7);
+  z-index: 1000;
+  font-weight: 700;
+}
+
+.navbar-logo{
+width: 14rem;
+}
+
+/* .nav a{
+text-decoration: none;
+color: rgb(0, 0, 0);
+} */
+
+.nav-list{
+font-size: 15px;
+}
+
+.nav-link{
+  color: #ffffff !important;
+  }
+
+.nav-link:hover {
+color: #965806 !important;
+}
+
+.nav-item{
+  margin: 0px 20px;
+}
+
+/* @media (max-width:1078px) {
+.nav-list{
+  font-size: 11px;
+}   
+} */
+
+/*Apply styles after scroll*/
+.scrolling-active {
+background-color: #000000;
+box-shadow: 0px 1px 8px 3px rgb(0 0 0 / 20%)
+}
+
+.scrolling-active .nav a{
+color: #000000;
+}
+
+.scrolling-active .nav a:hover{
+color: #af782b;
+}
+
+.nav-light .navbar-toggler {
+color: #af782b;
+border-color: #D08F32;
+}    
+
+.scrolling-active .nav-light .navbar-toggler {
+color: rgb(255 255 255 / 55%);
+border-color: rgb(0 0 0 / 51%);
+}
+
+.navbar-toggler {
+padding: 0.25rem 0.75rem;
+font-size: 1.25rem;
+line-height: 1;
+background-color: transparent;
+border: 1px solid transparent;
+border-radius: 0.25rem;
+transition: box-shadow .15s ease-in-out;
+}
+
+
+/* --------------------------------------------------- */
+
+/* Logo----------------------------------------------- */
+.logo{
+  width: 5vw;
+}
+/* --------------------------------------------------- */
+
+/* ---------------------- Hamburger Button Animation */
+.container-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+width: 32px;
+height: 2px;
+background-color: rgb(255, 255, 255);
+margin: 4px -1px;
+transition: 0.4s;
+}
+
+.scrolling-active .bar1, .scrolling-active .bar2, .scrolling-active .bar3{
+background-color: rgb(0, 0, 0);
+}
+
+.bar1,.bar2{
+margin-bottom: 8px;
+}
+
+.change .bar1 {
+-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+transform: rotate(-45deg) translate(-9px, 8px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+-webkit-transform: rotate(45deg) translate(-8px, -8px);
+transform: rotate(45deg) translate(-6px, -6px);
+} 
+/* ----------------------------------------------------- */
+
+
+
+/* =========================================================================================================== */
+/* ============================================ HOME ========================================================= */
+/* =========================================================================================================== */
+
+/* Video Main ----------------------*/
+/* 
+.container-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("./assets/bg.jpg") no-repeat center center/cover;
+  z-index: 1;
+}
+
+.container-video:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 114.5%;
+  background: rgba(0, 0, 0, 45%);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 2;
+} */
+
+/* Left-Heading Inside Main   */
+/* .heading-video-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:3;
+} 
+*/
+.glassmorphic{
+  background: rgb(255 255 255 / 50%);
+  box-shadow: 0px 0px 32px 0 #99651f;
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid #99651f;
+} 
+/* ---------------------------------------------- */
+.main-wrapper {
+  height: 100vh;  
+}
+
+
+.bg-main-left{
+  background-color: #050608;
+}
+
+.bg-main-right{
+ background: url("/image/bg-right-main-6.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+/* CONCEPT---------------------------- */
+
+#Concept{
+  background-color: #8c8c7b80;
+}
+
+/* DEMO GENERAL ============================== */
+.hover-concept {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 65vh;
+}
+
+.hover-concept-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+.hover-concept .bg-concept {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-concept-content {
+  position: relative;
+  z-index: 99;
+}
+
+
+/* DEMO 1 ============================== */
+.hover-concept .bg-concept{
+  width: 105%;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  transition: all 0.3s;
+}
+
+.hover-concept-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  transition: all 0.4s;
+}
+
+/* .hover-concept .hover-concept-overlay {
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+.hover-concept-description {
+  transform: translateY(0.5rem);
+  transition: all 0.4s;
+  opacity: 0;
+}
+
+.hover-concept:hover .hover-concept-content {
+  bottom: 2rem;
+
+}
+
+.hover-concept:hover .hover-concept-description {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-concept:hover .bg-concept {
+  left: 0;
+}
+
+.hover-concept:hover .hover-concept-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.concept-overlay-img{
+  width: 25rem;
+}
+
+.grid-container-concept {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.paradise-mansion-bg{
+  background-color: #000000;
+}
+
+.grid-container-icon{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 1rem;
+}
+
+.social-icon{
+  width: 2rem;
+}
+/* ----------------------------------- */
+
+
+/* Contact ---------------------------*/
+.form-control{
+  background-color: #2D2D2D;
+  border-radius: 0%;
+}
+/* ----------------------------------- */
+
+/* =========================================================================================================== */
+/* =========================================================================================================== */
