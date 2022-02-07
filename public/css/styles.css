@@ -1,12 +1,33 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --main-gold-dark: #965806;
 }
 
-html{
-    scroll-behavior: smooth;
-  }
+
+/* Base reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* box-sizing and font sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* Set font size for easy rem calculations
+ * default document font size = 16px, 1rem = 16px, 100% = 16px
+ * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+*/
+  scroll-behavior: smooth;
+}
+
 /* ===================================== CUSTOM CSS ============================================================*/
 
 /* TRANSITION */
@@ -70,6 +91,15 @@ header {
 width: 14rem;
 }
 
+/* .navbar-container ul li .underline {
+  height: 3px;
+  background-color: #000000;
+  transition: width 0.2s, background-color 0.5s;
+  margin: 0 auto;
+  opacity: 0;
+} */
+
+
 /* .nav a{
 text-decoration: none;
 color: rgb(0, 0, 0);
@@ -84,7 +114,7 @@ font-size: 15px;
   }
 
 .nav-link:hover {
-color: #965806 !important;
+color: var(--main-gold-dark) !important;
 }
 
 .nav-item{
@@ -246,7 +276,7 @@ transform: rotate(45deg) translate(-6px, -6px);
 }
 
 .bg-main-right{
- background: url("/image/bg-right-main-6.jpg");
+ background: url("/image/bg-right-main-8.jpg");
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
@@ -262,7 +292,7 @@ transform: rotate(45deg) translate(-6px, -6px);
 .hover-concept {
   overflow: hidden;
   position: relative;
-  padding-bottom: 65vh;
+  padding-bottom: 50vh;
 }
 
 .hover-concept-overlay {
@@ -290,8 +320,7 @@ transform: rotate(45deg) translate(-6px, -6px);
   z-index: 99;
 }
 
-
-/* DEMO 1 ============================== */
+/* ########## */
 .hover-concept .bg-concept{
   width: 105%;
   position: absolute;
@@ -328,13 +357,21 @@ transform: rotate(45deg) translate(-6px, -6px);
   transform: none;
 }
 
-.hover-concept:hover .bg-concept {
-  left: 0;
+
+/* Background */
+/* .bg-concept {
+  opacity: 0;
 }
 
-.hover-concept:hover .hover-concept-overlay {
+
+.hover-concept:hover .bg-concept {
+  left: 0;
+  opacity: 1;
+} */
+/* ### */
+/* .hover-concept:hover .hover-concept-overlay {
   background: rgba(0, 0, 0, 0.5);
-}
+} */
 
 .concept-overlay-img{
   width: 25rem;
@@ -344,10 +381,10 @@ transform: rotate(45deg) translate(-6px, -6px);
   display: grid;
   grid-template-columns: auto;
 }
-
+/* 
 .paradise-mansion-bg{
   background-color: #000000;
-}
+} */
 
 .grid-container-icon{
   display: grid;
@@ -358,6 +395,44 @@ transform: rotate(45deg) translate(-6px, -6px);
 .social-icon{
   width: 2rem;
 }
+
+/* Border Animation */
+
+ .concept-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 450px;
+}
+ .concept-wrap a {
+  position: relative;
+  flex-grow: 1;
+  cursor: pointer;
+}
+ .concept-wrap a:before {
+  content: '';
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/-1);
+  left: calc(2px/-1);
+  background: linear-gradient(to right, rgb(183,113,11) 0%, rgb(183,113,11) 100%), linear-gradient(to top, rgb(183,113,11) 50%, transparent 50%), linear-gradient(to top, rgb(183,113,11) 50%, transparent 50%), linear-gradient(to right, rgb(183,113,11) 0%, rgb(183,113,11) 100%), linear-gradient(to left, rgb(183,113,11) 0%, rgb(183,113,11) 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out;
+  transform: scaleX(0) rotate(0deg);
+  transition-delay: 0.6s, 0.3s, 0s;
+}
+ .concept-wrap a:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(0deg);
+  transition-delay: 0s, 0.3s, 0.6s;
+}
+/* #### */
+
+
 /* ----------------------------------- */
 
 
@@ -365,6 +440,10 @@ transform: rotate(45deg) translate(-6px, -6px);
 .form-control{
   background-color: #2D2D2D;
   border-radius: 0%;
+}
+
+.font-color-contact{
+  color: var(--main-gold-dark);
 }
 /* ----------------------------------- */
 

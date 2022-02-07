@@ -86,31 +86,64 @@ tl.fromTo(slider, 1.2, { x: "0%" }, { x: "-100%", ease: Power2.easeInOut }, "+=1
 
 
 // Scroll Smooth
-window.smoothScroll = function(target) {
+// window.smoothScroll = function(target) {
 
-	var scrollContainer = target,
-	header = document.querySelectorAll('.navbar'),
-	space = header[0].clientHeight;
+// 	var scrollContainer = target,
+// 	header = document.querySelectorAll('.navbar'),
+// 	space = header[0].clientHeight;
 
-	do {
-		scrollContainer = scrollContainer.parentNode;
-		if (!scrollContainer) return;
-		scrollContainer.scrollTop += 1;
-	} while (scrollContainer.scrollTop == 0);
+// 	do {
+// 		scrollContainer = scrollContainer.parentNode;
+// 		if (!scrollContainer) return;
+// 		scrollContainer.scrollTop += 1;
+// 	} while (scrollContainer.scrollTop == 0);
 
-	var targetY = -space;
+// 	var targetY = -space;
 
-	do {
-		if (target == scrollContainer) break;
-		targetY += target.offsetTop;
-	} while (target = target.offsetParent);
+// 	do {
+// 		if (target == scrollContainer) break;
+// 		targetY += target.offsetTop;
+// 	} while (target = target.offsetParent);
 
-	scroll = function(c, a, b, i) {
+// 	scroll = function(c, a, b, i) {
 
-		i++; if (i > 30) return;
-		c.scrollTop = a + (b - a) / 30 * i;
-		setTimeout(function() {scroll(c, a, b, i); }, 5);
-	}
+// 		i++; if (i > 30) return;
+// 		c.scrollTop = a + (b - a) / 30 * i;
+// 		setTimeout(function() {scroll(c, a, b, i); }, 5);
+// 	}
 
-	scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-}
+// 	scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+// }
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".L-R", {
+	scrollTrigger: {
+	  trigger: ".L-R",
+	  start: "center bottom"
+	}, 
+	x: -50,
+	opacity: 0,
+	duration:1.5,
+  });
+
+gsap.from(".R-L", {
+    scrollTrigger: {
+      trigger: ".R-L",
+      start: "center bottom"
+    }, 
+    x: 50,
+    opacity: 0,
+    duration:1.5,
+});
+
+gsap.from(".concept-wrap", {
+	scrollTrigger: {
+	  trigger: ".concept-wrap",
+	  start: "center bottom"
+	}, 
+	x: -1,
+	opacity: 0,
+	duration:2,
+  });
+  
