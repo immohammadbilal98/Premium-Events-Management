@@ -595,9 +595,7 @@ transform: rotate(45deg) translate(-6px, -6px);
   .nav-list{
     font-size: 35px;
   }
-  header {
-    height: 12vh;
-  }
+ 
  }
 
 /* Large devices (desktops, less than 1200px) */

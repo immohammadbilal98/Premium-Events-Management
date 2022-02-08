@@ -120,7 +120,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.from(".L-R", {
 	scrollTrigger: {
 	  trigger: ".L-R",
-	  start: "center bottom"
+	  start: "center top"
 	}, 
 	x: -50,
 	opacity: 0,
@@ -130,7 +130,7 @@ gsap.from(".L-R", {
 gsap.from(".R-L", {
     scrollTrigger: {
       trigger: ".R-L",
-      start: "center bottom"
+      start: "center top"
     }, 
     x: 50,
     opacity: 0,
@@ -140,7 +140,7 @@ gsap.from(".R-L", {
 gsap.from(".showing", {
 	scrollTrigger: {
 	  trigger: ".showing",
-	  start: "center bottom"
+	  start: "center top"
 	}, 
 	x: -1,
 	opacity: 0,
