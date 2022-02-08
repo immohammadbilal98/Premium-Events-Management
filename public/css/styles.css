@@ -543,14 +543,9 @@ transform: rotate(45deg) translate(-6px, -6px);
 /* =========================================================================================================== */
 /* =========================================================================================================== */
 
-@media (max-width: 575.98px) {
-  .hover-concept{
-    padding-bottom: 28vh !important;
-  }
-  .col-concept{
-    display: flex;
-  }
-}
+/* @media (max-width: 575.98px) {
+  
+} */
 
 
 
@@ -559,13 +554,23 @@ transform: rotate(45deg) translate(-6px, -6px);
   .col-hide-mob{
     display: none;
   }
+  .hover-concept{
+    padding-bottom: 28vh !important;
+  }
+  .col-concept{
+    display: flex;
+  }
+  
   
 }
 
 @media (max-width: 600px) { 
   .bg-main-right{   
   justify-content: center !important;
-   } 
+   }
+  body{
+   overflow-x: hidden !important; 
+  } 
 }
 
 
