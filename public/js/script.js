@@ -78,7 +78,7 @@ const navbar = document.querySelector(".nav-list");
 const navigation = document.querySelector("#Navigation");
 
 const tl = new TimelineMax();
-tl.fromTo(slider, 1.2, { x: "0%" }, { x: "-100%", ease: Power3.easeInOut }, "+=1.2")
+tl.fromTo(slider, 4.5, { x: "0%" }, { x: "-100%", ease: Power3.easeInOut }, "+=1.2")
   .fromTo(logo, 1, { opacity: 0, x: 300}, { opacity: 1, x: 0 }, "-=0.5")
   .fromTo(navbar,2, {opacity:0, x:-100} , {opacity:1, x:0},"-=0.5" )
 //   .fromTo(navigation,1.5,{opacity:0} , {opacity:1},"-=0.5" )
@@ -115,17 +115,16 @@ tl.fromTo(slider, 1.2, { x: "0%" }, { x: "-100%", ease: Power3.easeInOut }, "+=1
 // 	scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 // }
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-// gsap.from(".L-R", {
-// 	scrollTrigger: {
-// 	  trigger: ".L-R",
-// 	  start: "center top"
-// 	}, 
-// 	x: -50,
-// 	opacity: 0,
-// 	duration:1.5,
-//   });
+gsap.from(".L-R", {
+	scrollTrigger: {
+	  trigger: ".L-R"
+	}, 
+	x: -50,
+	opacity: 0,
+	duration:1.5,
+  });
 
 // gsap.from(".R-L", {
 //     scrollTrigger: {
@@ -147,18 +146,19 @@ tl.fromTo(slider, 1.2, { x: "0%" }, { x: "-100%", ease: Power3.easeInOut }, "+=1
 // 	duration:2,
 //   });
 
-//   gsap.from(".showing-logo", {
-// 	scrollTrigger: {
-// 	  trigger: ".showing-logo",
-// 	  start: "center bottom"
-// 	}, 
-// 	x: -1,
-// 	opacity: 0,
-// 	duration:2,
-// 	delay:2
-//   });  
+  gsap.from(".showing-logo", {
+	scrollTrigger: {
+	  trigger: ".showing-logo",
+	  start: "center bottom"
+	}, 
+	x: -1,
+	opacity: 0,
+	duration:2,
+	delay:6
+  });  
   
 
+SmoothVerticalScrolling(myelement, 275, "center");
 
 function SmoothVerticalScrolling(e, time, where) {
     var eTop = e.getBoundingClientRect().top;

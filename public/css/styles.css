@@ -31,7 +31,7 @@ html {
  * default document font size = 16px, 1rem = 16px, 100% = 16px
  * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
 */
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 
@@ -247,9 +247,9 @@ transition: box-shadow .15s ease-in-out;
 /* --------------------------------------------------- */
 
 /* Logo----------------------------------------------- */
-/* .logo{
+.logo{
   width: 5vw;
-} */
+}
 /* --------------------------------------------------- */
 
 /* ---------------------- Hamburger Button Animation */
@@ -534,8 +534,10 @@ transform: rotate(45deg) translate(-6px, -6px);
 }
 
 .map{
-  border:0; 
-  height: 47vh; 
+  border: 0;
+  height: 32.9vh;
+  width: 19vw;
+  padding-top: 3.5vh;
 }
 /* ----------------------------------- */
 
@@ -588,11 +590,11 @@ transform: rotate(45deg) translate(-6px, -6px);
     width: 34vw !important;
     height: 20vh !important;
   }
-  .navbar-nav{
+  /* .navbar-nav{
     background: rgba(0,0,0,.7);
     margin-top: 21px;
     padding: 77px 0px;
-  }
+  } */
   .nav-list{
     font-size: 35px;
   }
