@@ -16,7 +16,6 @@ body{
 }
 
 
-
 /* box-sizing and font sizing */
 
 *,
@@ -88,7 +87,7 @@ ul.transition li {
   height: 100vh;
   /* background: linear-gradient(to left, #ba7453, #d1a984); */
   background-color: #000000;
-  z-index: 1050;
+  z-index: 1000;
 }
 
 /* Image-center */
@@ -149,9 +148,37 @@ ul.transition li {
   -webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
 
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%) !important;
+}
 
+
+.parallax{
+  background: url('/image/bg-right-main-8.jpg') repeat fixed 100%;
+  background-size: cover;
+  color: aliceblue;
+}
+/* .parallax-1{
+  background: url('https://images.pexels.com/photos/3369569/pexels-photo-3369569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
+  background-size: cover;
+  color: aliceblue;
+}
+.parallax-2{
+  background: url('https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
+  background-size: cover;
+  color: aliceblue;
+} */
+.parallax-inner{
+  /* padding-top: 20%;
+  padding-bottom: 20%; */
+  padding: 310px 0px;
+}
 /* -------------------------------- */
 
+.modal-backdrop {
+  display: none;
+}
 
 /* NAVIGATION --------------------------*/
 header {
@@ -165,13 +192,14 @@ header {
   /* background-color: #ffffff00; */
   /* background-image: linear-gradient(rgb(249 250 251),rgb(249 250 251 / 75%),rgb(249 250 251 / 50%),rgb(249 250 251 / 25%),rgb(249 250 251 / 0%)); */
   background: rgba(0,0,0,.7);
-  z-index: 1000;
+  z-index: 500;
   font-weight: 700;
 }
 
 .navbar-logo{
 width: 14rem;
 }
+
 
 /* .navbar-container ul li .underline {
   height: 3px;
@@ -188,15 +216,15 @@ color: rgb(0, 0, 0);
 } */
 
 .nav-list{
-font-size: 15px;
+font-size: 30px;
 }
 
 .nav-link{
-  color: #ffffff !important;
+  color: var(--main-gold-dark) !important;
   }
 
 .nav-link:hover {
-color: var(--main-gold-dark) !important;
+color: #fff !important;
 }
 
 .nav-item{
@@ -210,7 +238,7 @@ color: var(--main-gold-dark) !important;
 } */
 
 /*Apply styles after scroll*/
-.scrolling-active {
+/* .scrolling-active {
 background-color: #000000;
 box-shadow: 0px 1px 8px 3px rgb(0 0 0 / 20%)
 }
@@ -221,17 +249,17 @@ color: #000000;
 
 .scrolling-active .nav a:hover{
 color: #af782b;
-}
+} */
 
 .nav-light .navbar-toggler {
-color: #af782b;
-border-color: #D08F32;
+color: rgba(0,0,0,.7);;
+border-color: rgba(0,0,0,.7);;
 }    
 
-.scrolling-active .nav-light .navbar-toggler {
-color: rgb(255 255 255 / 55%);
-border-color: rgb(0 0 0 / 51%);
-}
+/* .scrolling-active .nav-light .navbar-toggler {
+color: rgba(0,0,0,.7);
+border-color: rgba(0,0,0,.7);
+} */
 
 .navbar-toggler {
 padding: 0.25rem 0.75rem;
@@ -261,10 +289,15 @@ transition: box-shadow .15s ease-in-out;
 .bar1, .bar2, .bar3 {
 width: 32px;
 height: 2px;
-background-color: rgb(255, 255, 255);
-margin: 4px -1px;
+background-color: var(--main-gold-dark);
+margin: 0px -4px;
 transition: 0.4s;
 }
+
+.hamburger{
+  z-index: 2000;
+}
+/* ------------------------ */
 
 .scrolling-active .bar1, .scrolling-active .bar2, .scrolling-active .bar3{
 background-color: rgb(0, 0, 0);
@@ -274,6 +307,7 @@ background-color: rgb(0, 0, 0);
 margin-bottom: 8px;
 }
 
+/* Change Hamburger */
 .change .bar1 {
 -webkit-transform: rotate(-45deg) translate(-9px, 6px);
 transform: rotate(-45deg) translate(-9px, 8px);
@@ -284,7 +318,28 @@ transform: rotate(-45deg) translate(-9px, 8px);
 .change .bar3 {
 -webkit-transform: rotate(45deg) translate(-8px, -8px);
 transform: rotate(45deg) translate(-6px, -6px);
-} 
+}
+
+/* Exit Hamburger */
+.change-exit .bar1 {
+  -webkit-transform: rotate(0deg) translate(0px,0px);
+  transform: rotate(0deg) translate(0px, 0px);
+  }
+  
+  .change-exit .bar2 {opacity: 1;}
+  
+  .change-exit .bar3 {
+  -webkit-transform: rotate(0deg) translate(0px, 0px);
+  transform: rotate(0deg) translate(0px, 0px);
+  } 
+
+/* OFF-CANVAS */
+
+.offcanvas-header,.offcanvas-body{
+  background: rgb(0, 0, 0);
+}
+
+/* ------------------- */
 /* ----------------------------------------------------- */
 
 
@@ -363,10 +418,12 @@ transform: rotate(45deg) translate(-6px, -6px);
 }
 
 .bg-main-right{
- background: url("/image/bg-right-main-7.jpg");
+ background: url("/image/bg-right-main-8.jpg");
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
+ width: 85.1rem;
+ padding: 332px 0px;
 }
 
 /* CONCEPT---------------------------- */

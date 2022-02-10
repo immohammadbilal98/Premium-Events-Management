@@ -20,6 +20,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
 
+    <script src="/js/parallax.min.js"></script>
+
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>  
@@ -86,25 +88,50 @@
            </div>
          </nav> -->
          <nav class="navbar navbar-expand-sm main-nav">
-          <div class="container-fluid ">
-              <ul class="nav navbar-nav flex-nowrap">
+          <div class="container-fluid">
+              <ul class="nav navbar-nav flex-nowrap" style="margin-bottom: 50px;">
                   <li class="nav-item active">
-                    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                      Link with href
+                    <a class="btn position-absolute hamburger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                      <span class="navbar-toggler-icon container-icon" onclick="ChangeIcon(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                      </span>
                     </a>
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas offcanvas-start" tabindex="1000" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                       <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                        <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
                       </div>
+                      
                       <div class="offcanvas-body">
-                        <div>
-                          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                        <div>                         
+                          <ul class="d-flex flex-column nav-list p-0 mt-5" style="list-style: none;">
+                            <li class="nav-item active ">
+                              <a class="nav-link nav-hover" href="/">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                            
+                              <a class="nav-link nav-hover" href="/#About">ABOUT</a>        
+                            </li>
+                            <li class="nav-item">
+                             <a class="nav-link nav-hover" href="/#Concept">CONCEPTS</a>      
+                           </li>
+                            <li class="nav-item">
+                             <a class="nav-link nav-hover" href="/">MEDIA</a>      
+                           </li>
+                           <li class="nav-item">
+                             <a class="nav-link nav-hover" href="/careers">CAREERS</a>      
+                           </li>
+                            <li class="nav-item">
+                              <a class="nav-link nav-hover" href="/#Contact">CONTACT US</a>        
+                            </li>
+                          </ul>
                         </div>
                     </div>
                   </li>
               </ul>
-              <ul class="nav navbar-nav justify-content-center">
+              <ul class="nav navbar-nav justify-content-center" style="margin-left: 8rem;">
                   <li class="nav-item"><img src="/image/pem-logo.png" class="logo" alt="logo"></li>
               </ul>
               <ul class="nav navbar-nav justify-content-end">
