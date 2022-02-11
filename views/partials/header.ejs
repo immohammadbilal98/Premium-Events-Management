@@ -10,10 +10,15 @@
      
     
     <!-- Animation.css -->  
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   
     <!-- CSS File -->
     <link rel="stylesheet" href="/css/styles.css"/>
+
+    <!-- FONT STYLES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
   
     <!-- JQUERY File -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -27,7 +32,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    
    
 
     <!-- Favicon -->
@@ -87,20 +91,27 @@
              </ul>
            </div>
          </nav> -->
-         <nav class="navbar navbar-expand-sm main-nav">
+         <!-- aaa -->
+         <nav class="navbar navbar-expand-sm main-nav uk-navbar-container">
           <div class="container-fluid">
-              <ul class="nav navbar-nav flex-nowrap" style="margin-bottom: 50px;">
+              <ul class="nav navbar-nav justify-content-start" style="margin-bottom: 50px;">
                   <li class="nav-item active">
                     <a class="btn position-absolute hamburger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                      <span class="navbar-toggler-icon container-icon" onclick="ChangeIcon(this)">
+                      <span class="navbar-toggler-icon container-icon" > <!-- onclick="ChangeIcon(this)"-->
                         <div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div>
                       </span>
                     </a>
-                    <div class="offcanvas offcanvas-start" tabindex="1000" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas offcanvas-start offcanvas-nav-primary border-0" tabindex="1000" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                       <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                          <span class="navbar-toggler-icon container-icon change" data-bs-dismiss="offcanvas" aria-label="Close" style="position: absolute; left: 45px; top: 33px;"> <!-- onclick="ChangeIcon(this)"-->
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                          </span>
+                        </h5>
                         <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
                       </div>
                       
@@ -108,51 +119,54 @@
                         <div>                         
                           <ul class="d-flex flex-column nav-list p-0 mt-5" style="list-style: none;">
                             <li class="nav-item active ">
-                              <a class="nav-link nav-hover" href="/">HOME</a>
+                              <a class="nav-link nav-hover oc-scroll font-offcanvas nav-one" href="/">HOME</a>
                             </li>
                             <li class="nav-item">
                             
-                              <a class="nav-link nav-hover" href="/#About">ABOUT</a>        
+                              <a class="nav-link nav-hover oc-scroll font-offcanvas nav-two" href="/#About">ABOUT</a>        
                             </li>
                             <li class="nav-item">
-                             <a class="nav-link nav-hover" href="/#Concept">CONCEPTS</a>      
+                             <a class="nav-link nav-hover oc-scroll font-offcanvas nav-three" href="/#Concept">CONCEPTS</a>      
                            </li>
                             <li class="nav-item">
-                             <a class="nav-link nav-hover" href="/">MEDIA</a>      
+                             <a class="nav-link nav-hover oc-scroll font-offcanvas nav-four" href="/">MEDIA</a>      
                            </li>
                            <li class="nav-item">
-                             <a class="nav-link nav-hover" href="/careers">CAREERS</a>      
+                             <a class="nav-link nav-hover oc-scroll font-offcanvas nav-one" href="/careers">CAREERS</a>      
                            </li>
                             <li class="nav-item">
-                              <a class="nav-link nav-hover" href="/#Contact">CONTACT US</a>        
+                              <a class="nav-link nav-hover oc-scroll font-offcanvas nav-one" href="/#Contact">CONTACT US</a>        
                             </li>
                           </ul>
                         </div>
+                    </div>
                     </div>
                   </li>
               </ul>
               <ul class="nav navbar-nav justify-content-center" style="margin-left: 8rem;">
                   <li class="nav-item"><img src="/image/pem-logo.png" class="logo" alt="logo"></li>
               </ul>
-              <ul class="nav navbar-nav justify-content-end">
+              <ul class="nav navbar-nav justify-content-end" style="margin-bottom: 6px;">
                   <li class="nav-item">
                     <div class="grid-container-icon">
                       <div class="grid-item">
-                        <a href="https://www.facebook.com/Premium-Events-Management-111872551406806"><img src="/image/icon/fb-g.png" class="social-icon logo" alt=""></a>
+                        <a href="https://www.facebook.com/Premium-Events-Management-111872551406806"><img src="/image/icon/fb-gd.png" class="social-icon logo" alt=""></a>
                       </div>
                       <div class="grid-item">
-                        <a href="https://www.instagram.com/premiumeventsmanagement/?fbclid=IwAR2Rfd9hEBo6ZesgV_XdTFTuk39hna6XpLqAEJI9M74hh10yldXJmn4Fmp8"><img src="/image/icon/insta-g.png" class="social-icon logo" alt=""></a>
+                        <a href="https://www.instagram.com/premiumeventsmanagement/?fbclid=IwAR2Rfd9hEBo6ZesgV_XdTFTuk39hna6XpLqAEJI9M74hh10yldXJmn4Fmp8"><img src="/image/icon/insta-gd.png" class="social-icon logo" alt=""></a>
                       </div>
                       <div class="grid-item">
-                        <a href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln-g.png" class="social-icon logo" alt=""></a>
+                        <a href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln-gdd.png" class="social-icon logo" alt=""></a>
                       </div>
                     </div>
                   </li>
                  
               </ul>
           </div>
-      </nav>
-      
+        </nav>
+         <!-- aaa -->
+
+        
          <!-- <a class="nav-link nav-hover" style="cursor: pointer;" onclick="smoothScroll(document.getElementById('About'))">ABOUT</a> -->
    </div>
    <!-- <nav class="navbar navbar-expand-lg navbar-light "> .bg-light bg-gradient -->

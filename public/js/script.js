@@ -10,6 +10,21 @@ let ChangeIcon = function(icon){
     icon.classList.toggle("change")
 }
 
+
+// let mb= document.querySelector(".modal-backdrop");
+// let hamburger_close = document.querySelector(".container-icon");
+
+// if(mb){
+// mb.addEventListener('click', closeModal);
+// }
+
+// const closeModal = function () {
+//   mb.classList.remove('fade show');
+//   icon.classList.remove('change');
+//   console.log("working...")
+// };
+
+
 // let ExitIcon = function(icon_exit){
 //   icon_exit.classList.toggle("change-exit")
 // }
@@ -129,6 +144,37 @@ gsap.from(".L-R", {
 	duration:1.5,
   });
 
+// gsap.from(".nav-one", {
+//   scrollTrigger: {
+//     trigger: ".nav-one"
+//   }, 
+//   x: -50,
+//   opacity: 0,
+//   duration:5,
+//   delay:5
+//   });
+
+// gsap.from(".nav-one", {
+//   scrollTrigger: {
+//     trigger: ".nav-one"
+//   }, 
+//   x: -50,
+//   opacity: 0,
+//   duration:5,
+//   delay:5
+//   });
+
+// gsap.from(".nav-one", {
+//   scrollTrigger: {
+//     trigger: ".nav-one"
+//   }, 
+//   x: -50,
+//   opacity: 0,
+//   duration:5,
+//   delay:5
+//   });
+
+
 // gsap.from(".R-L", {
 //     scrollTrigger: {
 //       trigger: ".R-L",
@@ -161,21 +207,36 @@ gsap.from(".L-R", {
   });  
   
 
-SmoothVerticalScrolling(myelement, 275, "center");
+// SmoothVerticalScrolling(myelement, 275, "center");
 
-function SmoothVerticalScrolling(e, time, where) {
-    var eTop = e.getBoundingClientRect().top;
-    var eAmt = eTop / 100;
-    var curTime = 0;
-    while (curTime <= time) {
-        window.setTimeout(SVS_B, curTime, eAmt, where);
-        curTime += time / 100;
-    }
-}
+// function SmoothVerticalScrolling(e, time, where) {
+//     var eTop = e.getBoundingClientRect().top;
+//     var eAmt = eTop / 100;
+//     var curTime = 0;
+//     while (curTime <= time) {
+//         window.setTimeout(SVS_B, curTime, eAmt, where);
+//         curTime += time / 100;
+//     }
+// }
 
-function SVS_B(eAmt, where) {
-    if(where == "center" || where == "")
-        window.scrollBy(0, eAmt / 2);
-    if (where == "top")
-        window.scrollBy(0, eAmt);
-}
+// function SVS_B(eAmt, where) {
+//     if(where == "center" || where == "")
+//         window.scrollBy(0, eAmt / 2);
+//     if (where == "top")
+//         window.scrollBy(0, eAmt);
+// }
+
+
+// ======================================
+$(document).ready(function() {
+  var navHeight = Math.round($('.uk-navbar-container').height());
+  
+  $('.oc-scroll').on('click', function() {
+    var $el = $(this).attr('href');
+    
+    $('#offcanvas-nav-primary').on('hidden', function() {
+      UIkit.scroll(this, {offset: navHeight}).scrollTo($el);
+    });
+  });
+  
+});
