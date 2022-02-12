@@ -24,9 +24,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-
-    <script src="/js/parallax.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/js/foundation.min.js"></script>
+    <!-- <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script> -->
+    <!-- <script src="/js/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script> -->
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>  
@@ -40,7 +41,7 @@
     <!-- Title -->
     <title>Premium Events Management</title> 
   </head>
-  <body data-barba="wrapper">
+  <body>
 
     <header id=Navigation>
       <!-- NavBar -->
@@ -94,55 +95,30 @@
          <!-- aaa -->
          <nav class="navbar navbar-expand-sm main-nav uk-navbar-container">
           <div class="container-fluid">
-              <ul class="nav navbar-nav justify-content-start" style="margin-bottom: 50px;">
-                  <li class="nav-item active">
-                    <a class="btn position-absolute hamburger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                      <span class="navbar-toggler-icon container-icon" > <!-- onclick="ChangeIcon(this)"-->
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                      </span>
-                    </a>
-                    <div class="offcanvas offcanvas-start offcanvas-nav-primary border-0" tabindex="1000" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                      <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                          <span class="navbar-toggler-icon container-icon change" data-bs-dismiss="offcanvas" aria-label="Close" style="position: absolute; left: 45px; top: 33px;"> <!-- onclick="ChangeIcon(this)"-->
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                            <div class="bar3"></div>
-                          </span>
-                        </h5>
-                        <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
-                      </div>
-                      
-                      <div class="offcanvas-body">
-                        <div>                         
-                          <ul class="d-flex flex-column nav-list p-0 mt-5" style="list-style: none;">
-                            <li class="nav-item active ">
-                              <a class="nav-link nav-hover oc-scroll font-offcanvas nav-one" href="/">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                            
-                              <a class="nav-link nav-hover oc-scroll font-offcanvas nav-two" href="/#About">ABOUT</a>        
-                            </li>
-                            <li class="nav-item">
-                             <a class="nav-link nav-hover oc-scroll font-offcanvas nav-three" href="/#Concept">CONCEPTS</a>      
-                           </li>
-                            <li class="nav-item">
-                             <a class="nav-link nav-hover oc-scroll font-offcanvas nav-four" href="/">MEDIA</a>      
-                           </li>
-                           <li class="nav-item">
-                             <a class="nav-link nav-hover oc-scroll font-offcanvas nav-one" href="/careers">CAREERS</a>      
-                           </li>
-                            <li class="nav-item">
-                              <a class="nav-link nav-hover oc-scroll font-offcanvas nav-one" href="/#Contact">CONTACT US</a>        
-                            </li>
-                          </ul>
-                        </div>
-                    </div>
-                    </div>
-                  </li>
+             <!-- @ -->
+             <!-- @ -->
+             <ul class="nav navbar-nav justify-content-start" style="margin-bottom: 50px;">
+              <li class="nav-item active">
+             <!-- # -->
+             <a href="#navigation" class="nav-trigger offcanvas-toggle"style="margin-top: 42px;" aria-labelledby="offcanvasExampleLabel">
+              Menu <span></span>
+            </a>
+            <nav class="nav-container" id="offcanvasExampleLabel">            
+              <ul class="navv font-offcanvas">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/#About">ABOUT</a></li>
+                <li><a href="/#Concept">CONCEPT</a></li>
+                <li><a href="/">MEDIA</a></li>
+                <li><a href="/careers">CAREERS</a></li>
+                <li><a href="/#Contact">CONTACT</a></li>
               </ul>
+            </nav>
+            
+            <div class="overlay"></div> <!-- improve main element 3d movement -->
+          </li>
+        </ul>
+            
+             <!-- # -->
               <ul class="nav navbar-nav justify-content-center" style="margin-left: 8rem;">
                   <li class="nav-item"><img src="/image/pem-logo.png" class="logo" alt="logo"></li>
               </ul>
