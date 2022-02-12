@@ -56,9 +56,7 @@ app.post('/send', (req, res) => {
       host: 'smtp.premiumeventsmanagement.com',
       port: 587,
       auth: {
-          user: "bilal@premiumeventsmanagement.com", // generated ethereal user
-          pass: "(vvMx#O6"  // generated ethereal password
-      },
+            },
       tls:{
         rejectUnauthorized:false
       }
