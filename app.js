@@ -52,30 +52,30 @@ app.post('/send', (req, res) => {
     `;
   
     // create reusable transporter object using the default SMTP transport
-       let transporter = nodemailer.createTransport({
-      host: 'smtp.premiumeventsmanagement.com',
-      port: 587,
-      auth: {
-            },
-      tls:{
-        rejectUnauthorized:false
-      }
-    });
+    //    let transporter = nodemailer.createTransport({
+    //   host: 'smtp.premiumeventsmanagement.com',
+    //   port: 587,
+    //   auth: {
+    //         },
+    //   tls:{
+    //     rejectUnauthorized:false
+    //   }
+    // });
     
   
 
 
-    // let transporter = nodemailer.createTransport({
-    //   service: 'gmail',
-    //   auth: {
-    //     type: 'OAuth2',
-    //     user: process.env.USER,
-    //     pass: process.env.PASS,
-    //     clientId: process.env.CLIENTID,
-    //     clientSecret: process.env.CLIENTSECRET,
-    //     refreshToken: process.env.REFRESHTOKEN
-    //   }
-    // });
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        type: 'OAuth2',
+        user: process.env.USER,
+        pass: process.env.PASS,
+        clientId: process.env.CLIENTID,
+        clientSecret: process.env.CLIENTSECRET,
+        refreshToken: process.env.REFRESHTOKEN
+      }
+    });
 
   
     // setup email data with unicode symbols

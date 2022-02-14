@@ -19,12 +19,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+    <!-- UIkit CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" /> -->
+
+
   
     <!-- JQUERY File -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/js/foundation.min.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
+    
     <!-- <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script> -->
     <!-- <script src="/js/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script> -->
@@ -93,14 +101,13 @@
            </div>
          </nav> -->
          <!-- aaa -->
-         <nav class="navbar navbar-expand-sm main-nav uk-navbar-container">
-          <div class="container-fluid">
-             <!-- @ -->
-             <!-- @ -->
-             <ul class="nav navbar-nav justify-content-start" style="margin-bottom: 50px;">
-              <li class="nav-item active">
-             <!-- # -->
-             <a href="#navigation" class="nav-trigger offcanvas-toggle"style="margin-top: 42px;" aria-labelledby="offcanvasExampleLabel">
+       <nav class="navbar navbar-expand-lg">
+       
+             <div class="container-fluid">
+             <ul class="nav navbar-nav justify-content-start" >
+              <li class="nav-item">
+       
+             <a href="#navigation" class="nav-trigger offcanvas-toggle">
               Menu <span></span>
             </a>
             <nav class="nav-container" id="offcanvasExampleLabel">            
@@ -114,15 +121,14 @@
               </ul>
             </nav>
             
-            <div class="overlay"></div> <!-- improve main element 3d movement -->
+            <div id="my-id" uk-offcanvas="overlay: true"></div>
           </li>
-        </ul>
+             </ul>
             
-             <!-- # -->
               <ul class="nav navbar-nav justify-content-center" style="margin-left: 8rem;">
-                  <li class="nav-item"><img src="/image/pem-logo.png" class="logo" alt="logo"></li>
+                  <li class="nav-item"><img src="/image/logos-sm.png" class="img-fluid" alt="logo"></li>
               </ul>
-              <ul class="nav navbar-nav justify-content-end" style="margin-bottom: 6px;">
+              <ul class="nav navbar-nav justify-content-end" >
                   <li class="nav-item">
                     <div class="grid-container-icon">
                       <div class="grid-item">
@@ -138,9 +144,53 @@
                   </li>
                  
               </ul>
-          </div>
-        </nav>
-         <!-- aaa -->
+             </div>
+        </nav> 
+         <!-- @@@@@@@@@@@@@@@@@@@ -->
+         <!-- example 2 - using auto margins -->
+<!-- <nav class="navbar navbar-expand-md">
+  <div class="navbar-nav mr-auto w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+       
+          <a href="#navigation" class="nav-trigger offcanvas-toggle">
+           Menu <span></span>
+         </a>
+         <nav class="nav-container" id="offcanvasExampleLabel">            
+           <ul class="navv font-offcanvas">
+             <li><a href="/">HOME</a></li>
+             <li><a href="/#About">ABOUT</a></li>
+             <li><a href="/#Concept">CONCEPT</a></li>
+             <li><a href="/">MEDIA</a></li>
+             <li><a href="/careers">CAREERS</a></li>
+             <li><a href="/#Contact">CONTACT</a></li>
+           </ul>
+         </nav>
+         
+         <div class="overlay"></div>
+       </li>
+      </ul>
+  </div>
+  <div class="mx-auto order-0">
+      <a class="navbar-brand mx-auto" href="#">
+        <img src="/image/pem-logo-2.png" class="logo" alt="logo">
+      </a>
+  </div>
+  <div class="navbar-nav mr-auto w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/Premium-Events-Management-111872551406806"><img src="/image/icon/fb-gd.png" class="social-icon logo" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/premiumeventsmanagement/?fbclid=IwAR2Rfd9hEBo6ZesgV_XdTFTuk39hna6XpLqAEJI9M74hh10yldXJmn4Fmp8"><img src="/image/icon/insta-gd.png" class="social-icon logo" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln-gdd.png" class="social-icon logo" alt=""></a>
+        </li>
+      </ul>
+  </div>
+</nav> -->
+         <!-- @@@@@@@@@@@@@@@@@@@ -->
 
         
          <!-- <a class="nav-link nav-hover" style="cursor: pointer;" onclick="smoothScroll(document.getElementById('About'))">ABOUT</a> -->

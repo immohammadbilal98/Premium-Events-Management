@@ -11,6 +11,7 @@ let ChangeIcon = function(icon){
 }
 
 
+
 // let mb= document.querySelector(".modal-backdrop");
 // let hamburger_close = document.querySelector(".container-icon");
 
@@ -96,7 +97,7 @@ const navbar = document.querySelector(".nav-list");
 const navigation = document.querySelector("#Navigation");
 
 const tl = new TimelineMax();
-tl.fromTo(slider, 0.5, { x: "0%" }, { x: "-100%", ease: Power3.easeInOut }, "+=1.2")
+tl.fromTo(slider, 4.5, { x: "0%" }, { x: "-100%", ease: Power3.easeInOut }, "+=1.2")
   // .fromTo(logo, 1, { opacity: 0, x: 300}, { opacity: 1, x: 0 }, "-=0.5")
   // .fromTo(navbar,2, {opacity:0, x:-100} , {opacity:1, x:0},"-=0.5" )
 //   .fromTo(navigation,1.5,{opacity:0} , {opacity:1},"-=0.5" )
@@ -144,35 +145,14 @@ gsap.from(".L-R", {
 	duration:1.5,
   });
 
-// gsap.from(".nav-one", {
-//   scrollTrigger: {
-//     trigger: ".nav-one"
-//   }, 
-//   x: -50,
-//   opacity: 0,
-//   duration:5,
-//   delay:5
-//   });
-
-// gsap.from(".nav-one", {
-//   scrollTrigger: {
-//     trigger: ".nav-one"
-//   }, 
-//   x: -50,
-//   opacity: 0,
-//   duration:5,
-//   delay:5
-//   });
-
-// gsap.from(".nav-one", {
-//   scrollTrigger: {
-//     trigger: ".nav-one"
-//   }, 
-//   x: -50,
-//   opacity: 0,
-//   duration:5,
-//   delay:5
-//   });
+gsap.from(".R-L", {
+    scrollTrigger: {
+      trigger: ".R-L",
+    }, 
+    x: 50,
+    opacity: 0,
+    duration:1.5,
+});  
 
 
 // gsap.from(".R-L", {
@@ -183,7 +163,41 @@ gsap.from(".L-R", {
 //     x: 50,
 //     opacity: 0,
 //     duration:1.5,
-// });
+// });  
+
+
+// gsap.from(".nav-one", {
+//   scrollTrigger: {
+//     trigger: ".nav-one"
+//   }, 
+//   x: -50,
+//   opacity: 0,
+//   duration:5,
+//   delay:5
+//   });
+
+// gsap.from(".nav-one", {
+//   scrollTrigger: {
+//     trigger: ".nav-one"
+//   }, 
+//   x: -50,
+//   opacity: 0,
+//   duration:5,
+//   delay:5
+//   });
+
+// gsap.from(".nav-one", {
+//   scrollTrigger: {
+//     trigger: ".nav-one"
+//   }, 
+//   x: -50,
+//   opacity: 0,
+//   duration:5,
+//   delay:5
+//   });
+
+
+
 
 // gsap.from(".showing", {
 // 	scrollTrigger: {
@@ -252,6 +266,21 @@ function toggleNavigation(event) {
   body.classList.toggle('nav-open');
 }
 
+
+
+
+// $(document).ready(function() {
+// 	var navHeight = Math.round($('.uk-navbar-container').height());
+	
+// 	$('.oc-scroll').on('click', function() {
+// 	  var $el = $(this).attr('href');
+	  
+// 	  $('#offcanvas-nav-primary').on('hidden', function() {
+// 		UIkit.scroll(this, {offset: navHeight}).scrollTo($el);
+// 	  });
+// 	});
+	
+//   });
 // const overlay = document.querySelector('.overlay');
 // const nav_container = document.querySelector('.nav-container');
 
