@@ -5,6 +5,12 @@
         <div class="main-wrapper">
         <div class="parallax-inner">
             <br>
+            <div class="d-flex justify-content-center">
+                <div class="glassmorphic d-inline col-lg-8 p-2 ">
+                <h1 class="text-center text-white text-uppercase">Careers</h1>
+                <p class="fs-5 text-center text-white">Here at Premium Events Management we believe each and every member of our team has a vital part to play in the success of the company. That is why we offer huge amounts of training, are dedicated to career progression and we guarantee hard work and determination will be recognized!</p>
+            </div>
+            </div>
             <br>
         </div>
         <a href="/careers#Careers">
@@ -19,8 +25,13 @@
     <section id="Careers" >
         <div class="container-fluid careers-bg">
             <div class="container pt-5">
-                <h1 class="text-center">CAREERS</h1>
-                
+                <div class="row justify-content-center">
+                   <div class="col-lg-8">
+                       
+                   </div>
+               </div>
+                <h1 class="text-center text-uppercase">Join Our Team!</h1>
+               
                 <div class="form-careers">
                     <div class="row justify-content-center">
                        <div class="col-lg-4">
@@ -29,20 +40,21 @@
                        <div class="col-lg-4">
                        </div>
                     </div>
+                    <form action="/careers/sendcareers" method="POST" enctype="multipart/form-data" class="CareersForm">
                     <div class="row justify-content-center">
                         <div class="col-lg-4">
                             <label for="exampleFormControlTextarea1" class="form-label ">Full Name*</label>
-                            <input class="form-control bg-transparent" type="text" aria-label="default input example" required>
+                            <input name="namec" class="form-control bg-transparent" type="text" aria-label="default input example" required>
                         </div>
                         <div class="col-lg-4">
                             <label for="exampleFormControlTextarea1" class="form-label ">Phone*</label>
-                            <input class="form-control bg-transparent"  type="text" aria-label="default input example" required>
+                            <input name="phonec" class="form-control bg-transparent"  type="text" aria-label="default input example" required>
                         </div>                       
                 </div>
                 <div class="row mt-3  justify-content-center">
                     <div class="col-lg-8">
                         <label for="exampleFormControlInput1" class="form-label ">Email*</label>
-                        <input type="email" class="form-control bg-transparent" id="exampleFormControlInput1" required>
+                        <input name="emailc" type="email" class="form-control bg-transparent" id="exampleFormControlInput1" required>
                     </div>
                 </div>
                 <!-- <div class="row mt-3  justify-content-center">
@@ -276,32 +288,35 @@
                 <div class="row mt-3 justify-content-center">
                     <div class="col-lg-4">
                         <label for="formFile" class="form-label">Upload CV*</label>
-                        <input class="form-control bg-transparent" type="file" id="formFile" required>
+                        <input name="pdf" class="form-control bg-transparent" type="file" id="formFile" required>
                     </div>
                     <div class="col-lg-4">
                         <label for="formFile" class="form-label">Upload Cover Letter</label>
-                        <input class="form-control bg-transparent" type="file" id="formFile">
+                        <input name="pdf" class="form-control bg-transparent" type="file" id="formFile">
                     </div>                   
                 </div>
                 <div class="row mt-3 justify-content-center">
                     <div class="col-lg-8">
                         <label for="formFile" class="form-label">Upload Photo</label>
-                        <input class="form-control bg-transparent" type="file" id="formFile">
+                        <input name="image" class="form-control bg-transparent" type="file" id="formFile">
                     </div>
                 </div>
                 <div class="row my-3 justify-content-center">
                     <div class="col-lg-8">
                         <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                        <textarea class="form-control bg-transparent" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        <textarea name="msgc" class="form-control bg-transparent" id="exampleFormControlTextarea1" rows="5"></textarea>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center mb-5">
-                    <button type="submit" class="btn btn-dark">Submit</button>
+                    <button type="submit" class="btn btn-send text-white CareersButton">Send</button>
                   </div>
+                </form>
                 </div>
+          
             </div>
         </div>
     </section>
+    
 <!-- <section class="parallax-1">
     <div class="parallax-inner">
         <br>
