@@ -70,10 +70,27 @@ app.post('/send', (req, res) => {
     });
 
   
+    // create reusable transporter object using the default SMTP transport
+    /*
+    let transporter = nodemailer.createTransport({
+      host: 'us2.smtp.mailhostbox.com',
+      port: 587,
+      secure: true, // true for 465, false for other ports
+      auth: {
+          user: 'bilal@premiumeventsmanagement.com', // generated ethereal user
+          pass: '(vvMx#O6'  // generated ethereal password
+      },
+      tls:{
+        rejectUnauthorized:false
+      }
+    });
+    */
+
+  
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"Premium Events Management Contact"', // sender address
-        to: 'info@premiumeventsmanagement.com', // list of receivers
+        to: 'im.mohammedbilal98@gmail.com', // list of receivers
         subject: 'Premium Events Management Contact Request', // Subject line
         text: 'Hello world?', // plain text body
         html: output // html body
@@ -94,26 +111,25 @@ app.post('/send', (req, res) => {
  
 // @_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@
 
-
-var name;
-var phone;
-var email;
-var msg;
-var paths
-
 var Storage = multer.diskStorage({
-    destination: function(req, file, callback) {
-        callback(null, "uploads");
-    },
-    filename: function(req, file, callback) {
-        callback(null, new Date().toISOString().replace(/:/g, '-') + '-' + file.originalname);
-    }
+  destination: function(req, file, callback) {
+      callback(null, "uploads");
+  },
+  filename: function(req, file, callback) {
+      callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
+  }
 });
 
 var upload = multer({
-    storage: Storage,
-}); //Field name and max count
-// .single("image")
+  storage: Storage
+}).single("image"); 
+
+
+
+// var upload = multer({
+//     dest: 'uploads/',
+//     storage: multer.memoryStorage()
+// }).single("image");
 
 app.post('/careers/sendcareers',(req,res) => {
     upload(req,res,function(err){
@@ -121,17 +137,36 @@ app.post('/careers/sendcareers',(req,res) => {
             console.log(err)
             return res.end("Something went wrong!");
         }else{
-            name = req.body.namec
-            phone = req.body.phonec
-            email = req.body.emailc
-            msg = req.body.msgc
-            paths = req.file.paths
-            console.log(name)
-            console.log(phone)
-            console.log(email)
-            console.log(msg)
-            console.log(req.file)
-            console.log(req.files)
+          // var name;
+          // var phone;
+          // var email;
+          // var msg;
+          // var paths
+
+          //   name = req.body.namec
+          //   phone = req.body.phonec
+          //   email = req.body.emailc
+          //   msg = req.body.msgc
+          //   paths = req.file.paths
+          //   console.log(name)
+          //   console.log(phone)
+          //   console.log(email)
+          //   console.log(msg)
+          //   console.log(req.file)
+          //   console.log(reqx.files)
+          const path = req.file.path;
+          const output_2 = `
+             <p>You have a new careers request</p>
+             <h3>Careers Details</h3>
+             <ul>  
+               <li>Name: ${req.body.namec}</li>
+               <li>Email: ${req.body.emailc}</li>
+               <li>Phone No.: ${req.body.phonec}</li>
+             </ul>
+             <h3>Message</h3>
+             <p>${req.body.msgc}</p>
+           `;
+          
             let transporter = nodemailer.createTransport({
               service: 'gmail',
               auth: {
@@ -150,10 +185,11 @@ app.post('/careers/sendcareers',(req,res) => {
                 to: 'im.mohammedbilal98@gmail.com', // list of receivers
                 subject: 'Premium Events Management Contact Request', // Subject line
                 text:'Hello world?',
+                html: output_2,
                 attachments: [
                   {
-                   paths: paths
-                  }
+                    path: path
+                }
                ]
               };
               
@@ -167,7 +203,7 @@ app.post('/careers/sendcareers',(req,res) => {
                         return res.end(err)
                     }else{
                         console.log("deleted")
-                        return res.render('/sendcareers')
+                        return res.render("send");
                     }
                   })
                 }

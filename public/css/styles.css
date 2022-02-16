@@ -27,11 +27,6 @@ body{
 
 html {
   box-sizing: border-box;
-  /* Set font size for easy rem calculations
- * default document font size = 16px, 1rem = 16px, 100% = 16px
- * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-*/
-  /* scroll-behavior: smooth; */
 }
 
 
@@ -62,23 +57,6 @@ html {
   color: var(--main-gold-dark);
 }
 /* TRANSITION */
-/* ul.transition {
-  display: flex;
-  position: absolute;
-  z-index: 10;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  pointer-events: none;
-}
-
-ul.transition li {
-  transform: scaleY(0);
-  background: white;
-  width: 20%;
-} */
 
 .slider {
   position: absolute;
@@ -99,56 +77,7 @@ ul.transition li {
 }
 
 
-/* Arrow Animation */
-
-/* .arrows {
-  width: 60px;
-  height: 82px;
-  position: absolute;
-  left: 48%; */
-  /* margin-left: -30px; */
-  /* bottom: 0px;
-}
-
-.arrows path {
-  stroke: var(--main-gold-dark);
-  fill: transparent;
-  stroke-width: 1px;  
-  animation: arrow 2s infinite;
-  -webkit-animation: arrow 2s infinite; 
-}
-
-@keyframes arrow
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-@-webkit-keyframes arrow 
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-.arrows path.a1 {
-  animation-delay:-1s;
-  -webkit-animation-delay:-1s; 
-}
-
-.arrows path.a2 {
-  animation-delay:-0.5s;
-  -webkit-animation-delay:-0.5s; 
-}
-
-.arrows path.a3 { 
-  animation-delay:0s;
-  -webkit-animation-delay:0s; 
-} */
-
+/* ARROW */
 .arrow{
     position: absolute;
     top: 53%;
@@ -196,21 +125,9 @@ ul.transition li {
 
 
 .parallax{
-  /* background: url('/image/bg-right-main-8.jpg') repeat fixed 100%;
-  background-size: cover;
-  color: aliceblue; */
   background-color: #000;
 }
-/* .parallax-1{
-  background: url('https://images.pexels.com/photos/3369569/pexels-photo-3369569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
-  background-size: cover;
-  color: aliceblue;
-}
-.parallax-2{
-  background: url('https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
-  background-size: cover;
-  color: aliceblue;
-} */
+
 .parallax-inner{
   /* padding-top: 20%;
   padding-bottom: 20%; */
@@ -250,21 +167,6 @@ header {
 width: 14rem;
 }
 
-
-/* .navbar-container ul li .underline {
-  height: 3px;
-  background-color: #000000;
-  transition: width 0.2s, background-color 0.5s;
-  margin: 0 auto;
-  opacity: 0;
-} */
-
-
-/* .nav a{
-text-decoration: none;
-color: rgb(0, 0, 0);
-} */
-
 .nav-list{
 font-size: 16px;
 }
@@ -281,26 +183,6 @@ transition: text-shadow .15s ease-in-out;
 
 .nav-item{
   margin: 0px 20px;
-}
-
-/* @media (max-width:1078px) {
-.nav-list{
-  font-size: 11px;
-}   
-} */
-
-/*Apply styles after scroll*/
-.scrolling-active {
-background-color: #7e0a0a;
-box-shadow: 0px 1px 8px 3px rgb(0 0 0 / 20%)
-}
-
-.scrolling-active .nav a{
-color: #000000;
-}
-
-.scrolling-active .nav a:hover{
-color: #af782b;
 }
 
 .nav-light .navbar-toggler {
@@ -358,9 +240,6 @@ transition: 0.4s;
   margin-bottom: 8px;
   }
 
-/* .hamburger{
-  z-index: 2000;
-} */
 /* ------------------------ */
 
 .scrolling-active .bar1, .scrolling-active .bar2, .scrolling-active .bar3{
@@ -699,10 +578,6 @@ transform: rotate(45deg) translate(-6px, -6px);
   display: grid;
   grid-template-columns: auto;
 }
-/* 
-.paradise-mansion-bg{
-  background-color: #000000;
-} */
 
 .grid-container-icon{
   display: grid;

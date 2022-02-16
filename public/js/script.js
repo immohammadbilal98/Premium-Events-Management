@@ -266,12 +266,12 @@ function toggleNavigation(event) {
   body.classList.toggle('nav-open');
 }
 
-$('button.ContactButton').click( function() {
-  $('form.ContactForm').submit();
-});
-$('button.CareersButton').click( function() {
-  $('form.CareersForm').submit();
-});
+// $('button.ContactButton').click( function() {
+//   $('form.ContactForm').submit();
+// });
+// $('button.CareersButton').click( function() {
+//   $('form.CareersForm').submit();
+// });
 
 
 // $(document).ready(function() {
