@@ -472,7 +472,7 @@ transform: rotate(45deg) translate(-6px, -6px);
 }
 
 /* ABOUT ---------------------------- */
-#About{
+#About,#Careers{
   background-image: url("/image/about-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -528,7 +528,7 @@ transform: rotate(45deg) translate(-6px, -6px);
 
 .hover-concept-content {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 2.5rem;
   left: 5px;
   z-index: 99;
   transition: all 0.4s;
@@ -922,6 +922,10 @@ transform: rotate(45deg) translate(-6px, -6px);
   will-change: transform, opacity;
   animation: carousel-animate-vertical 37s linear infinite;
 }
+/* 
+.carousel__item:hover {
+  animation-play-state: paused;
+} */
 
 /* 27-3*/
 .carousel__item:nth-child(1) {
@@ -1009,3 +1013,5 @@ transform: rotate(45deg) translate(-6px, -6px);
     visibility: hidden;
   }
 }
+
+

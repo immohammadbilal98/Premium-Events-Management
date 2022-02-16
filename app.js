@@ -71,20 +71,20 @@ app.post('/send', (req, res) => {
 
   
     // create reusable transporter object using the default SMTP transport
-    /*
+/*
     let transporter = nodemailer.createTransport({
-      host: 'us2.smtp.mailhostbox.com',
-      port: 587,
+      host: 'mail.premiumeventsmanagement.com',
+      port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-          user: 'bilal@premiumeventsmanagement.com', // generated ethereal user
-          pass: '(vvMx#O6'  // generated ethereal password
+          user: 'contactform@premiumeventsmanagement.com', // generated ethereal user
+          pass: 'Contact@i2022'  // generated ethereal password
       },
       tls:{
         rejectUnauthorized:false
       }
-    });
-    */
+    });*/
+
 
   
     // setup email data with unicode symbols

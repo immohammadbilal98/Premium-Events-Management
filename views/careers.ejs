@@ -43,17 +43,17 @@
                     <form action="/careers/sendcareers" method="POST" enctype="multipart/form-data" class="CareersForm">
                     <div class="row justify-content-center">
                         <div class="col-lg-4">
-                            <label for="exampleFormControlTextarea1" class="form-label ">Full Name*</label>
+                            <label for="validationCustom01" class="form-label ">Full Name*</label>
                             <input name="namec" class="form-control bg-transparent" type="text" aria-label="default input example" required>
                         </div>
                         <div class="col-lg-4">
-                            <label for="exampleFormControlTextarea1" class="form-label ">Phone*</label>
+                            <label for="validationCustom01" class="form-label ">Phone*</label>
                             <input name="phonec" class="form-control bg-transparent"  type="text" aria-label="default input example" required>
                         </div>                       
                 </div>
                 <div class="row mt-3  justify-content-center">
                     <div class="col-lg-8">
-                        <label for="exampleFormControlInput1" class="form-label ">Email*</label>
+                        <label for="validationCustom01" class="form-label ">Email*</label>
                         <input name="emailc" type="email" class="form-control bg-transparent" id="exampleFormControlInput1" required>
                     </div>
                 </div>
@@ -297,17 +297,17 @@
                 </div> -->
                 <div class="row mt-3 justify-content-center">
                     <div class="col-lg-8">
-                        <label for="formFile" class="form-label">Upload Photo</label>
-                        <input name="image" class="form-control bg-transparent" type="file" id="formFile">
+                        <label for="validationCustom01" class="form-label">Upload CV*</label>
+                        <input name="image" type="file" class="form-control bg-transparent" aria-label="file example" required>
                     </div>
                 </div>
                 <div class="row my-3 justify-content-center">
                     <div class="col-lg-8">
-                        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                        <textarea name="msgc" class="form-control bg-transparent" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        <label for="validationCustom01" class="form-label">Message*</label>
+                        <textarea name="msgc" class="form-control bg-transparent" id="exampleFormControlTextarea1" rows="5" required></textarea>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mb-5">
+                <div class="d-flex justify-content-center pb-5">
                     <button type="submit" class="btn btn-send text-white CareersButton">Send</button>
                   </div>
                 </form>
