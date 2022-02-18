@@ -90,7 +90,7 @@ app.post('/send', (req, res) => {
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"Premium Events Management Contact"', // sender address
-        to: 'im.mohammedbilal98@gmail.com', // list of receivers
+        to: 'info@premiumeventsmanagement.com ', // list of receivers
         subject: 'Premium Events Management Contact Request', // Subject line
         text: 'Hello world?', // plain text body
         html: output // html body
@@ -122,7 +122,7 @@ var Storage = multer.diskStorage({
 
 var upload = multer({
   storage: Storage
-}).single("image"); 
+}).single("pdf"); 
 
 
 
@@ -182,7 +182,7 @@ app.post('/careers/sendcareers',(req,res) => {
               
               var mailOptions = {
                 from: '"Premium Events Management Contact"', // sender address
-                to: 'im.mohammedbilal98@gmail.com', // list of receivers
+                to: 'careers@premiumeventsmanagement.com', // list of receivers
                 subject: 'Premium Events Management Contact Request', // Subject line
                 text:'Hello world?',
                 html: output_2,
@@ -203,7 +203,7 @@ app.post('/careers/sendcareers',(req,res) => {
                         return res.end(err)
                     }else{
                         console.log("deleted")
-                        return res.render("send");
+                        return res.render("sendcareers");
                     }
                   })
                 }

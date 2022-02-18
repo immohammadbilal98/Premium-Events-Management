@@ -19,23 +19,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
-    <!-- UIkit CSS -->
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" /> -->
-
-
-  
+   
     <!-- JQUERY File -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
     
-    <!-- <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script> -->
-    <!-- <script src="/js/parallax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script> -->
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>  
@@ -53,84 +41,34 @@
 
     <header id=Navigation>
       <!-- NavBar -->
-     <div class="container-xxl p-0">       
-         <!-- <nav class="nav navbar navbar-expand-lg nav-light p-0 pt-4">
-           <span class="navbar-brand ms-3" href="/">
-            <img src="/image/pem-logo.png" class="logo"  style="display: none;" alt="logo">
-             <div class="grid-container-icon">
-              <div class="grid-item">
-                <a href="https://www.facebook.com/Premium-Events-Management-111872551406806"><img src="/image/icon/fb-g.png" class="social-icon logo" alt=""></a>
-              </div>
-              <div class="grid-item">
-                <a href="https://www.instagram.com/premiumeventsmanagement/?fbclid=IwAR2Rfd9hEBo6ZesgV_XdTFTuk39hna6XpLqAEJI9M74hh10yldXJmn4Fmp8"><img src="/image/icon/insta-g.png" class="social-icon logo" alt=""></a>
-              </div>
-              <div class="grid-item">
-                <a href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln-g.png" class="social-icon logo" alt=""></a>
-              </div>
-            </div>
-           </span>
-           <button class="navbar-toggler m-2 " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon container-icon" onclick="ChangeIcon(this)">
-              <div class="bar1"></div>
-              <div class="bar2"></div>
-              <div class="bar3"></div>
-            </span>
-           </button>
-           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-             <ul class="navbar-nav nav-list align-items-center">
-               <li class="nav-item active ">
-                 <a class="nav-link nav-hover btn--animation-from-right" href="/">HOME</a>
-               </li>
-               <li class="nav-item">
-               
-                 <a class="nav-link nav-hover" href="/#About">ABOUT</a>        
-               </li>
-               <li class="nav-item">
-                <a class="nav-link nav-hover" href="/#Concept">CONCEPTS</a>      
-              </li>
-               <li class="nav-item">
-                <a class="nav-link nav-hover" href="/">MEDIA</a>      
-              </li>
-              <li class="nav-item">
-                <a class="nav-link nav-hover" href="/">CAREERS</a>      
-              </li>
-               <li class="nav-item">
-                 <a class="nav-link nav-hover" href="/#Contact">CONTACT US</a>        
-               </li>
-             </ul>
-           </div>
-         </nav> -->
-         <!-- aaa -->
-       <nav class="navbar navbar-expand-lg">
-       
-             <div class="container-fluid">
-             <ul class="nav navbar-nav justify-content-start" >
-              <li class="nav-item">
-       
-             <a href="#navigation" class="nav-trigger offcanvas-toggle">
-              Menu <span></span>
-            </a>
-            <nav class="nav-container" id="offcanvasExampleLabel">            
-              <ul class="navv font-offcanvas">
-                <li><a href="/">HOME</a></li>
-                <li><a href="/#About">ABOUT</a></li>
-                <li><a href="/#Concept">CONCEPT</a></li>
-                <li><a href="/">MEDIA</a></li>
-                <li><a href="/careers">CAREERS</a></li>
-                <li><a href="/#Contact">CONTACT</a></li>
-              </ul>
-            </nav>
-            
-            <div id="my-id" uk-offcanvas="overlay: true"></div>
-          </li>
-             </ul>
-            
-              <ul class="nav navbar-nav justify-content-center" style="margin-left: 8rem;">
-                  <li class="nav-item"><img src="/image/logos-sm.png" class="img-fluid" alt="logo"></li>
-              </ul>
-              <ul class="nav navbar-nav justify-content-end" >
-                  <li class="nav-item">
-                    <div class="grid-container-icon">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <!-- LEFT -->
+            <ul class="nav">
+               <a href="#navigation" class="nav-trigger">
+                 <span></span>
+               </a>           
+               <div class="nav-container">            
+                 <ul class="navv font-offcanvas nav-offcanvas">
+                   <li><a class="nav-offcanvas" href="/" onclick="location.href = '/'">HOME</a></li>
+                   <li><a class="nav-offcanvas" onclick="About_Nav(this)">ABOUT</a></li>
+                   <li><a class="nav-offcanvas" href="/#Concept" onclick="Concept_Nav(this)">CONCEPTS</a></li>
+                   <li><a class="nav-offcanvas" href="/">MEDIA</a></li>
+                   <li><a class="nav-offcanvas" href="/careers" onclick="location.href = '/careers'">CAREERS</a></li>
+                   <li><a class="nav-offcanvas" href="/#Contact" onclick="Contact_Nav(this)">CONTACT</a></li>
+                 </ul>
+               </div>    
+               <div class="overlay"></div> 
+            </ul>
+            <!-- CENTER -->
+            <ul class="nav justify-content-between">
+                <a class="navbar-brand me-0" href="/">
+                  <img src="/image/logos-sm.png" alt="">
+                </a>
+            </ul>
+            <!-- RIGHT-->
+            <ul class="nav justify-content-end">
+                <div class="grid-container-icon grid-container-all">
                       <div class="grid-item">
                         <a href="https://www.facebook.com/Premium-Events-Management-111872551406806"><img src="/image/icon/fb-gd.png" class="social-icon logo" alt=""></a>
                       </div>
@@ -138,108 +76,23 @@
                         <a href="https://www.instagram.com/premiumeventsmanagement/?fbclid=IwAR2Rfd9hEBo6ZesgV_XdTFTuk39hna6XpLqAEJI9M74hh10yldXJmn4Fmp8"><img src="/image/icon/insta-gd.png" class="social-icon logo" alt=""></a>
                       </div>
                       <div class="grid-item">
-                        <a href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln-gdd.png" class="social-icon logo" alt=""></a>
+                        <a href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln-gd.png" class="social-icon logo" alt=""></a>
                       </div>
                     </div>
-                  </li>
-                 
-              </ul>
-             </div>
-        </nav> 
-         <!-- @@@@@@@@@@@@@@@@@@@ -->
-         <!-- example 2 - using auto margins -->
-<!-- <nav class="navbar navbar-expand-md">
-  <div class="navbar-nav mr-auto w-100 order-3 dual-collapse2">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-       
-          <a href="#navigation" class="nav-trigger offcanvas-toggle">
-           Menu <span></span>
-         </a>
-         <nav class="nav-container" id="offcanvasExampleLabel">            
-           <ul class="navv font-offcanvas">
-             <li><a href="/">HOME</a></li>
-             <li><a href="/#About">ABOUT</a></li>
-             <li><a href="/#Concept">CONCEPT</a></li>
-             <li><a href="/">MEDIA</a></li>
-             <li><a href="/careers">CAREERS</a></li>
-             <li><a href="/#Contact">CONTACT</a></li>
-           </ul>
-         </nav>
-         
-         <div class="overlay"></div>
-       </li>
-      </ul>
-  </div>
-  <div class="mx-auto order-0">
-      <a class="navbar-brand mx-auto" href="#">
-        <img src="/image/pem-logo-2.png" class="logo" alt="logo">
-      </a>
-  </div>
-  <div class="navbar-nav mr-auto w-100 order-3 dual-collapse2">
-      <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-              <a class="nav-link" href="https://www.facebook.com/Premium-Events-Management-111872551406806"><img src="/image/icon/fb-gd.png" class="social-icon logo" alt=""></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/premiumeventsmanagement/?fbclid=IwAR2Rfd9hEBo6ZesgV_XdTFTuk39hna6XpLqAEJI9M74hh10yldXJmn4Fmp8"><img src="/image/icon/insta-gd.png" class="social-icon logo" alt=""></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln-gdd.png" class="social-icon logo" alt=""></a>
-        </li>
-      </ul>
-  </div>
-</nav> -->
-         <!-- @@@@@@@@@@@@@@@@@@@ -->
-
-        
-         <!-- <a class="nav-link nav-hover" style="cursor: pointer;" onclick="smoothScroll(document.getElementById('About'))">ABOUT</a> -->
-   </div>
-   <!-- <nav class="navbar navbar-expand-lg navbar-light "> .bg-light bg-gradient -->
-
-    <!--  Show this only on mobile to medium screens  -->
-      <!-- <a class="navbar-brand d-lg-none" href="/">
-        <img src="image/pem-logo.png" class="logo" alt="logo">
-      </a>
-    
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-    
-    <!--  Use flexbox utility classes to change how the child elements are justified  -->
-      <!-- <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
-    
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link nav-hover" href="/">ABOUT US</a>
-          </li>
-          <li class="nav-item">
-           <a class="nav-link nav-hover" href="/">OUR PROJECT</a>
-         </li>
-          <li class="nav-item">
-           <a class="nav-link nav-hover" href="/">MEDIA</a>
-         </li>
-        </ul> -->
-        
-        
-    <!--   Show this only lg screens and up   -->
-        <!-- <a class="navbar-brand d-none d-lg-block" href="#">
-          <img src="image/pem-logo.png" class="logo" alt="logo">
-        </a>
-        
-        
-        
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link nav-hover" href="/">BRANDS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-hover" href="/">CAREER</a>
-          </li>
-           <li class="nav-item">
-             <a class="nav-link nav-hover" href="/">CONTACT US</a>
-           </li>
-        </ul>
-      </div>
-    </nav> -->
+            </ul>
+          </div>
+        </nav>
+        <div>
+          <div class="grid-container-icon grid-container-mobile">
+            <div class="grid-item">
+              <a href="https://www.facebook.com/Premium-Events-Management-111872551406806"><img src="/image/icon/fb-gd.png" class="social-icon logo" alt=""></a>
+            </div>
+            <div class="grid-item">
+              <a href="https://www.instagram.com/premiumeventsmanagement/?fbclid=IwAR2Rfd9hEBo6ZesgV_XdTFTuk39hna6XpLqAEJI9M74hh10yldXJmn4Fmp8"><img src="/image/icon/insta-gd.png" class="social-icon logo" alt=""></a>
+            </div>
+            <div class="grid-item">
+              <a href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln-gd.png" class="social-icon logo" alt=""></a>
+            </div>
+          </div>
+        </div>
    </header> 

@@ -1,10 +1,10 @@
 //Change Navbar Scrolling 
-window.addEventListener('scroll', function () {
-    let nav_tigger = document.querySelector('.nav-trigger');
-    let windowPosition = window.scrollY > 0;
+// window.addEventListener('scroll', function () {
+//     let nav_tigger = document.querySelector('.nav-trigger');
+//     let windowPosition = window.scrollY > 0;
 
-    nav_tigger.classList.toggle('nav-menu-hidden', windowPosition);
-})
+//     nav_tigger.classList.toggle('nav-menu-hidden', windowPosition);
+// })
 
 let ChangeIcon = function(icon){
     icon.classList.toggle("change")
@@ -155,105 +155,18 @@ gsap.from(".R-L", {
 });  
 
 
-// gsap.from(".R-L", {
-//     scrollTrigger: {
-//       trigger: ".R-L",
-//       start: "center top"
-//     }, 
-//     x: 50,
-//     opacity: 0,
-//     duration:1.5,
-// });  
-
-
-// gsap.from(".nav-one", {
-//   scrollTrigger: {
-//     trigger: ".nav-one"
-//   }, 
-//   x: -50,
-//   opacity: 0,
-//   duration:5,
-//   delay:5
-//   });
-
-// gsap.from(".nav-one", {
-//   scrollTrigger: {
-//     trigger: ".nav-one"
-//   }, 
-//   x: -50,
-//   opacity: 0,
-//   duration:5,
-//   delay:5
-//   });
-
-// gsap.from(".nav-one", {
-//   scrollTrigger: {
-//     trigger: ".nav-one"
-//   }, 
-//   x: -50,
-//   opacity: 0,
-//   duration:5,
-//   delay:5
-//   });
-
-
-
-
-// gsap.from(".showing", {
-// 	scrollTrigger: {
-// 	  trigger: ".showing",
-// 	  start: "center top"
-// 	}, 
-// 	x: -1,
-// 	opacity: 0,
-// 	duration:2,
-//   });
-
-  gsap.from(".showing-logo", {
-	scrollTrigger: {
-	  trigger: ".showing-logo",
-	  start: "center bottom"
-	}, 
-	x: -1,
-	opacity: 0,
-	duration:2,
-	delay:6
-  });  
+  // gsap.from(".showing-logo", {
+	// scrollTrigger: {
+	//   trigger: ".showing-logo",
+	//   start: "center bottom"
+	// }, 
+	// x: -1,
+	// opacity: 0,
+	// duration:2,
+	// delay:6
+  // });  
   
 
-// SmoothVerticalScrolling(myelement, 275, "center");
-
-// function SmoothVerticalScrolling(e, time, where) {
-//     var eTop = e.getBoundingClientRect().top;
-//     var eAmt = eTop / 100;
-//     var curTime = 0;
-//     while (curTime <= time) {
-//         window.setTimeout(SVS_B, curTime, eAmt, where);
-//         curTime += time / 100;
-//     }
-// }
-
-// function SVS_B(eAmt, where) {
-//     if(where == "center" || where == "")
-//         window.scrollBy(0, eAmt / 2);
-//     if (where == "top")
-//         window.scrollBy(0, eAmt);
-// }
-
-
-// ======================================
-// $(document).ready(function() {
-//   var navHeight = Math.round($('.uk-navbar-container').height());
-  
-//   $('.oc-scroll').on('click', function() {
-//     var $el = $(this).attr('href');
-    
-//     $('#offcanvas-nav-primary').on('hidden', function() {
-//       UIkit.scroll(this, {offset: navHeight}).scrollTo($el);
-//     });
-//   });
-  
-// });
 
 
 var navTrigger = document.getElementsByClassName('nav-trigger')[0],
@@ -261,61 +174,34 @@ var navTrigger = document.getElementsByClassName('nav-trigger')[0],
 
 navTrigger.addEventListener('click', toggleNavigation);
 
+var closeMenu_overlay = document.querySelector(".overlay")
+closeMenu_overlay.addEventListener('click', toggleNavigation);
+
+var closeMenu_Nav = document.querySelector(".nav-offcanvas")
+closeMenu_Nav.addEventListener('click', toggleNavigation_nav);
+
 function toggleNavigation(event) {
   event.preventDefault();
   body.classList.toggle('nav-open');
 }
 
-// $('button.ContactButton').click( function() {
-//   $('form.ContactForm').submit();
-// });
-// $('button.CareersButton').click( function() {
-//   $('form.CareersForm').submit();
-// });
+function toggleNavigation_nav(event) {
+  event.preventDefault();
+  body.classList.toggle('nav-open');
+}
 
+let About_Nav = function () {
+  var elmnt = document.getElementById("About");
+  elmnt.scrollIntoView();
+}
 
-// $(document).ready(function() {
-// 	var navHeight = Math.round($('.uk-navbar-container').height());
-	
-// 	$('.oc-scroll').on('click', function() {
-// 	  var $el = $(this).attr('href');
-	  
-// 	  $('#offcanvas-nav-primary').on('hidden', function() {
-// 		UIkit.scroll(this, {offset: navHeight}).scrollTo($el);
-// 	  });
-// 	});
-	
-//   });
-// const overlay = document.querySelector('.overlay');
-// const nav_container = document.querySelector('.nav-container');
+let Concept_Nav = function () {
+  var elmnt = document.getElementById("Concept");
+  elmnt.scrollIntoView();
+}
 
-// overlay.addEventListener('click', function(event){
-// 	event.preventDefault();
-// 	nav_container.classList.add('navcontainer-hidden');
-// 	overlay.classList.add('overlay-hidden');
-// });
-
-// $(document).ready(function() {
-// 	$('.offcanvas-toggle').on('click', function() {
-// 	  $('body').toggleClass('offcanvas-expanded');
-// 	});
-//   });
-//   $(document).click(function(e) {
-// 	if ((e.target != $('.offcanvas')[0]) && (e.target != $('.offcanvas-toggle')[0]) && ($('body').hasClass('offcanvas-expanded'))) {
-// 	  var li_tags = $($('.offcanvas')[0]).find('li');
-// 	  var a_tags = $($('.offcanvas')[0]).find('a');
-// 	  for (var i = 0; i < li_tags.length; i++) {
-// 		if (e.target == li_tags[i] || e.target == a_tags[i]) {
-// 		  return;
-// 		}
-// 	  }
-// 	  $('body').toggleClass('offcanvas-expanded');
-// 	}
-//   })
-
-// $(document).foundation();
-
-// $('.nav-container a').on('click', function() {
-//   $('.nav-container').foundation('close');
-// });
+let Contact_Nav = function () {
+  var elmnt = document.getElementById("Contact");
+  elmnt.scrollIntoView();
+}
 
