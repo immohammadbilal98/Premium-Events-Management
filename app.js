@@ -90,7 +90,7 @@ app.post('/send', (req, res) => {
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"Premium Events Management Contact"', // sender address
-        to: 'info@premiumeventsmanagement.com ', // list of receivers
+        to: 'im.mohammedbilal98@gmail.com ', // list of receivers
         subject: 'Premium Events Management Contact Request', // Subject line
         text: 'Hello world?', // plain text body
         html: output // html body
@@ -122,7 +122,7 @@ var Storage = multer.diskStorage({
 
 var upload = multer({
   storage: Storage
-}).single("pdf"); 
+}).array("attachment",3); 
 
 
 
@@ -154,7 +154,14 @@ app.post('/careers/sendcareers',(req,res) => {
           //   console.log(msg)
           //   console.log(req.file)
           //   console.log(reqx.files)
-          const path = req.file.path;
+          const path_1 = req.files[0].path;
+          const path_2 = req.files[1].path;
+          const path_3 = req.files[2].path;
+          
+          // if(!path_3)
+          // {
+          //   console.log("Deleted Path 3")
+          // }
           const output_2 = `
              <p>You have a new careers request</p>
              <h3>Careers Details</h3>
@@ -182,32 +189,49 @@ app.post('/careers/sendcareers',(req,res) => {
               
               var mailOptions = {
                 from: '"Premium Events Management Contact"', // sender address
-                to: 'careers@premiumeventsmanagement.com', // list of receivers
+                to: 'im.mohammedbilal98@gmail.com ', // list of receivers
                 subject: 'Premium Events Management Contact Request', // Subject line
                 text:'Hello world?',
                 html: output_2,
                 attachments: [
                   {
-                    path: path
-                }
+                    path: path_1
+                },
+                {
+                  path: path_2
+              },
+              {
+                path: path_3
+            },
                ]
               };
               
-              transporter.sendMail(mailOptions, function(error, info){
-                if (error) {
-                  console.log(error);
-                } else {
-                  console.log('Email sent: ' + info.response);
-                  fs.unlink(path,function(err){
-                    if(err){
-                        return res.end(err)
-                    }else{
-                        console.log("deleted")
-                        return res.render("sendcareers");
-                    }
-                  })
-                }
-              });
+              // transporter.sendMail(mailOptions, function(error, info){
+              //   if (error) {
+              //     console.log(error);
+              //   } else {
+              //     console.log('Email sent: ' + info.response);
+              //     fs.unlink(path,function(err){
+              //       if(err){
+              //           return res.end(err)
+              //       }else{
+              //           console.log("deleted")
+              //           return res.render("sendcareers");
+              //       }
+              //     })
+              //   }
+              // });
+              // send mail with defined transport object
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          return console.log(error);
+      }
+      console.log('Message sent: %s', info.messageId);   
+      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+      // res.render("home", { msg: "email has been sent. " });
+      res.render("sendcareers");
+  });
         }
     })
 })

@@ -774,35 +774,28 @@ transform: rotate(45deg) translate(-6px, -6px);
 
 .map{
   border: 0;
-  height: 35.5vh;
+  /* height: 35.5vh;
   width: 19vw;
-  padding-top: 3.5vh;
+  padding-top: 3.5vh; */
 }
 /* ----------------------------------- */
 
 /* =========================================================================================================== */
 /* =========================================================================================================== */
 
-/* @media (max-width: 575.98px) {
-  
-} */
-
-
-
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .col-hide-mob{
     display: none;
   }
-  
-  /* .col-concept{
-    display: flex;
-  } */
   .fs-font{
     font-size: 1rem !important;
   }
   .carousel__item-body {
     padding: 0px 50px !important;
+  }
+  .form-space-mobile{
+    margin-bottom: 1rem;
   }
 
   
@@ -824,40 +817,30 @@ transform: rotate(45deg) translate(-6px, -6px);
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
-  /* .hover-concept{
-    padding-bottom: 40vh !important;
-  } */
+
+  .pd-email-contact{
+    margin-bottom: 38px;
+  }
  }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
-  /* .logo-move {
-    transform: translate(-75px, 0px);
-   } */
-  .map{
-    width: 34vw !important;
-    height: 20vh !important;
-  }
-  /* .navbar-nav{
-    background: rgba(0,0,0,.7);
-    margin-top: 21px;
-    padding: 77px 0px;
-  } */
+
   .nav-list{
     font-size: 35px;
+  }
+  .iframe-container {
+    padding-bottom: 67.25% !important;
+    margin-bottom: 2rem;
   }
  
  }
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
-  .map{
-    width: 22vw;
-  }
- }
-
 #Main{
   overflow: hidden;
+}
 }
 
 
@@ -982,3 +965,20 @@ transform: rotate(45deg) translate(-6px, -6px);
 }
 
 
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 86.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+.iframe-container > *{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
