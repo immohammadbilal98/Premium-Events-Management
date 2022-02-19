@@ -138,8 +138,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".L-R", {
 	scrollTrigger: {
-	  trigger: ".L-R"
+	  trigger: ".L-R",
+    start: "center bottom"
 	}, 
+  ease: Expo.easeInOut,
 	x: -50,
 	opacity: 0,
 	duration:1.5,
@@ -148,25 +150,112 @@ gsap.from(".L-R", {
 gsap.from(".R-L", {
     scrollTrigger: {
       trigger: ".R-L",
+      start: "center bottom",
     }, 
+    ease: Expo.easeInOut,
     x: 50,
     opacity: 0,
     duration:1.5,
 });  
 
 
-  // gsap.from(".showing-logo", {
-	// scrollTrigger: {
-	//   trigger: ".showing-logo",
-	//   start: "center bottom"
-	// }, 
-	// x: -1,
-	// opacity: 0,
-	// duration:2,
-	// delay:6
-  // });  
+// gsap.from(".R-L", {
+//     scrollTrigger: {
+//       trigger: ".R-L",
+//       start: "center top"
+//     }, 
+//     x: 50,
+//     opacity: 0,
+//     duration:1.5,
+// });  
+
+
+// gsap.from(".nav-one", {
+//   scrollTrigger: {
+//     trigger: ".nav-one"
+//   }, 
+//   x: -50,
+//   opacity: 0,
+//   duration:5,
+//   delay:5
+//   });
+
+// gsap.from(".nav-one", {
+//   scrollTrigger: {
+//     trigger: ".nav-one"
+//   }, 
+//   x: -50,
+//   opacity: 0,
+//   duration:5,
+//   delay:5
+//   });
+
+// gsap.from(".nav-one", {
+//   scrollTrigger: {
+//     trigger: ".nav-one"
+//   }, 
+//   x: -50,
+//   opacity: 0,
+//   duration:5,
+//   delay:5
+//   });
+
+
+
+
+// gsap.from(".showing", {
+// 	scrollTrigger: {
+// 	  trigger: ".showing",
+// 	  start: "center top"
+// 	}, 
+// 	x: -1,
+// 	opacity: 0,
+// 	duration:2,
+//   });
+
+  gsap.from(".showing-logo", {
+	scrollTrigger: {
+	  trigger: ".showing-logo",
+	  start: "center bottom"
+	}, 
+	x: -1,
+	opacity: 0,
+	duration:2,
+	delay:6
+  });  
   
 
+// SmoothVerticalScrolling(myelement, 275, "center");
+
+// function SmoothVerticalScrolling(e, time, where) {
+//     var eTop = e.getBoundingClientRect().top;
+//     var eAmt = eTop / 100;
+//     var curTime = 0;
+//     while (curTime <= time) {
+//         window.setTimeout(SVS_B, curTime, eAmt, where);
+//         curTime += time / 100;
+//     }
+// }
+
+// function SVS_B(eAmt, where) {
+//     if(where == "center" || where == "")
+//         window.scrollBy(0, eAmt / 2);
+//     if (where == "top")
+//         window.scrollBy(0, eAmt);
+// }
+
+
+// ======================================
+// $(document).ready(function() {
+//   $('.js-anchor-link').click(function(e){
+//     e.preventDefault();
+//     var target = $($(this).attr('href'));
+//     if(target.length){
+//       var scrollTo = target.offset().top;
+//       $('body, html').animate({scrollTop: scrollTo+'px'}, 800);
+//     }
+//   });  
+// });
 
 
 var navTrigger = document.getElementsByClassName('nav-trigger')[0],
@@ -190,18 +279,45 @@ function toggleNavigation_nav(event) {
   body.classList.toggle('nav-open');
 }
 
+
+// let About_Nav = function (event) {
+//   var elmnt = document.getElementById("About");
+//   elmnt.scrollIntoView();
+// }
+
 let About_Nav = function () {
-  var elmnt = document.getElementById("About");
-  elmnt.scrollIntoView();
+  if ( window.location.pathname == '/' ){
+    var elmnt = document.getElementById("About");
+    elmnt.scrollIntoView();
+    console.log(window.location.pathname);
+} else {
+    // Other page
+    location.href = '/#About'
+    console.log(window.location.pathname);
+}
 }
 
-let Concept_Nav = function () {
+let Concept_Nav = function (event) {
+  if ( window.location.pathname == '/' ){
   var elmnt = document.getElementById("Concept");
   elmnt.scrollIntoView();
+  }
+  else {
+    // Other page
+    location.href = '/#Concept'
+    console.log(window.location.pathname);
+}
 }
 
-let Contact_Nav = function () {
+let Contact_Nav = function (event) {
+  if ( window.location.pathname == '/' ){
   var elmnt = document.getElementById("Contact");
   elmnt.scrollIntoView();
+}
+else {
+  // Other page
+  location.href = '/#Contact'
+  console.log(window.location.pathname);
+}
 }
 

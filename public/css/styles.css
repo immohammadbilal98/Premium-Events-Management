@@ -109,6 +109,10 @@ html {
 .parallax-inner{
   padding: 230px 0px;
 }
+
+.fs-font{
+  font-size: 1.25rem;
+}
 /*------------------- */
 
 /*  OFF-CANVA*/
@@ -118,7 +122,7 @@ html {
 }
 
 .nav-trigger {
-  position: fixed;
+  position: absolute;
   z-index: 4;
   top: 35px;
   /* left: 40px; */
@@ -664,8 +668,8 @@ transform: rotate(45deg) translate(-6px, -6px);
 .hover-concept-content {
   position: absolute;
   bottom: 2.5rem;
-  left: 5px;
-  z-index: 99;
+  /* left: 0px; */
+  z-index: 0;
   transition: all 0.4s;
 }
 
@@ -673,41 +677,35 @@ transform: rotate(45deg) translate(-6px, -6px);
   background: rgba(0, 0, 0, 0.5);
 } */
 
-.hover-concept-description {
+/* .hover-concept-description {
   transform: translateY(0.5rem);
   transition: all 0.4s;
   opacity: 0;
-}
-
-.hover-concept:hover .hover-concept-content {
-  bottom: 3rem;
-
-}
-
-.hover-concept:hover .hover-concept-description {
-  opacity: 1;
-  transform: none;
-}
-
-
-/* Background */
-/* .bg-concept {
-  opacity: 0;
-}
-
-
-.hover-concept:hover .bg-concept {
-  left: 0;
-  opacity: 1;
-} */
-/* ### */
-/* .hover-concept:hover .hover-concept-overlay {
-  background: rgba(0, 0, 0, 0.5);
 } */
 
-/* .concept-overlay-img{
-  width: 25rem;
-} */
+.concept-img{
+  transition: all 0.4s;
+}
+
+.concept-wrap:hover .concept-img {
+  /* bottom: 3rem; */
+  transform: scale(1.1);
+}
+
+.concept-box-pd{
+  padding: 4rem;
+}
+
+
+.concept-overlay-img{
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+}
 
 .grid-container-concept {
   display: grid;
@@ -725,8 +723,8 @@ transform: rotate(45deg) translate(-6px, -6px);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100vw;
-  /* margin: 0px 35px; */
+  /* width: 100vw; */
+  padding: 0px 40px;
 }
  .concept-wrap a {
   position: relative;
@@ -797,10 +795,16 @@ transform: rotate(45deg) translate(-6px, -6px);
     display: none;
   }
   
-  .col-concept{
+  /* .col-concept{
     display: flex;
+  } */
+  .fs-font{
+    font-size: 1rem !important;
   }
-  
+  .carousel__item-body {
+    padding: 0px 50px !important;
+  }
+
   
 }
 
@@ -811,6 +815,9 @@ transform: rotate(45deg) translate(-6px, -6px);
   body{
    overflow-x: hidden !important; 
   } 
+  .hover-concept{
+    padding-bottom: 30vh !important;
+  }
 }
 
 
@@ -849,7 +856,9 @@ transform: rotate(45deg) translate(-6px, -6px);
   }
  }
 
-
+#Main{
+  overflow: hidden;
+}
 
 
 .wrapper-card {
@@ -858,7 +867,7 @@ transform: rotate(45deg) translate(-6px, -6px);
   width: 100%;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .carousel-wrapper {
   position: relative;
