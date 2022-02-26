@@ -14,6 +14,7 @@ body{
 
 html {
   box-sizing: border-box;
+  -webkit-scroll-behavior: smooth;
 }
 
 /* SCROLLBAR CUSTOM */
@@ -35,6 +36,8 @@ html {
 	background-color: #E1D06E;
 }
 /* -------------------- */
+
+
 
 
 /* ===================================== CUSTOM CSS ============================================================*/
