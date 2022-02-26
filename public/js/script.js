@@ -105,27 +105,27 @@ tl.fromTo(slider, 4.5, { x: "0%" }, { x: "-100%", ease: Power3.easeInOut }, "+=1
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".L-R", {
-	scrollTrigger: {
-	  trigger: ".L-R",
-    start: "center bottom",
-	}, 
-  ease: Expo.easeInOut,
-	x: -50,
-	opacity: 0,
-	duration:1.5,
-  });
+// gsap.from(".L-R", {
+// 	scrollTrigger: {
+// 	  trigger: ".L-R",
+//     start: "center bottom",
+// 	}, 
+//   ease: Expo.easeInOut,
+// 	x: -50,
+// 	opacity: 0,
+// 	duration:1.5,
+//   });
 
-gsap.from(".R-L", {
-    scrollTrigger: {
-      trigger: ".R-L",
-      start: "center bottom",
-    }, 
-    ease: Expo.easeInOut,
-    x: 50,
-    opacity: 0,
-    duration:1.5,
-});  
+// gsap.from(".R-L", {
+//     scrollTrigger: {
+//       trigger: ".R-L",
+//       start: "center bottom",
+//     }, 
+//     ease: Expo.easeInOut,
+//     x: 50,
+//     opacity: 0,
+//     duration:1.5,
+// });  
 
 
 // gsap.from(".R-L", {
@@ -182,16 +182,16 @@ gsap.from(".R-L", {
 // 	duration:2,
 //   });
 
-  gsap.from(".showing-logo", {
-	scrollTrigger: {
-	  trigger: ".showing-logo",
-	  start: "center bottom"
-	}, 
-	x: -1,
-	opacity: 0,
-	duration:2,
-	delay:6
-  });  
+  // gsap.from(".showing-logo", {
+	// scrollTrigger: {
+	//   trigger: ".showing-logo",
+	//   start: "center bottom"
+	// }, 
+	// x: -1,
+	// opacity: 0,
+	// duration:2,
+	// delay:6
+  // });  
   
 
 // SmoothVerticalScrolling(myelement, 275, "center");
@@ -290,3 +290,22 @@ else {
 }
 }
 
+
+function SmoothVerticalScrolling(e, time, where) {
+  var eTop = e.getBoundingClientRect().top;
+  var eAmt = eTop / 100;
+  var curTime = 0;
+  while (curTime <= time) {
+      window.setTimeout(SVS_B, curTime, eAmt, where);
+      curTime += time / 100;
+  }
+}
+
+function SVS_B(eAmt, where) {
+  if(where == "center" || where == "")
+      window.scrollBy(0, eAmt / 2);
+  if (where == "top")
+      window.scrollBy(0, eAmt);
+}
+
+SmoothVerticalScrolling(About, 275, "center");
