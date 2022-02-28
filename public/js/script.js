@@ -182,16 +182,16 @@ gsap.registerPlugin(ScrollTrigger);
 // 	duration:2,
 //   });
 
-  // gsap.from(".showing-logo", {
-	// scrollTrigger: {
-	//   trigger: ".showing-logo",
-	//   start: "center bottom"
-	// }, 
-	// x: -1,
-	// opacity: 0,
-	// duration:2,
-	// delay:6
-  // });  
+  gsap.from(".showing-logo", {
+	scrollTrigger: {
+	  trigger: ".showing-logo",
+	  start: "center bottom"
+	}, 
+	x: -1,
+	opacity: 0,
+	duration:2,
+	delay:6
+  });  
   
 
 // SmoothVerticalScrolling(myelement, 275, "center");
@@ -290,22 +290,44 @@ else {
 }
 }
 
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('[data-scroll-container]'),
+//     smooth: true,
 
-function SmoothVerticalScrolling(e, time, where) {
-  var eTop = e.getBoundingClientRect().top;
-  var eAmt = eTop / 100;
-  var curTime = 0;
-  while (curTime <= time) {
-      window.setTimeout(SVS_B, curTime, eAmt, where);
-      curTime += time / 100;
-  }
-}
+// });
 
-function SVS_B(eAmt, where) {
-  if(where == "center" || where == "")
-      window.scrollBy(0, eAmt / 2);
-  if (where == "top")
-      window.scrollBy(0, eAmt);
-}
+butter.init();
 
-SmoothVerticalScrolling(About, 275, "center");
+gsap.from(".L-R", {
+	scrollTrigger: {
+	  trigger: ".L-R",
+    start: "center bottom",
+    // scroller: ".smooth-scroll",
+	}, 
+  ease: Expo.easeInOut,
+	x: -50,
+	opacity: 0,
+	duration:1.5,
+  });
+
+gsap.from(".R-L", {
+    scrollTrigger: {
+      trigger: ".R-L",
+      start: "center bottom",
+      // scroller: ".smooth-scroll",
+    }, 
+    ease: Expo.easeInOut,
+    x: 50,
+    opacity: 0,
+    duration:1.5,
+});  
+
+
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//   anchor.addEventListener('click', function (e) {
+//       e.preventDefault();
+//       document.querySelector(this.getAttribute('href')).scrollIntoView({
+//           behavior: 'smooth'
+//       });
+//   });
+// });
