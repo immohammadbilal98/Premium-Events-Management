@@ -103,7 +103,7 @@ tl.fromTo(slider, 4.5, { x: "0%" }, { x: "-100%", ease: Power3.easeInOut }, "+=1
 //   .fromTo(navigation,1.5,{opacity:0} , {opacity:1},"-=0.5" )
 
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 // gsap.from(".L-R", {
 // 	scrollTrigger: {
@@ -296,31 +296,31 @@ else {
 
 // });
 
-butter.init();
 
-gsap.from(".L-R", {
-	scrollTrigger: {
-	  trigger: ".L-R",
-    start: "center bottom",
-    // scroller: ".smooth-scroll",
-	}, 
-  ease: Expo.easeInOut,
-	x: -50,
-	opacity: 0,
-	duration:1.5,
-  });
 
-gsap.from(".R-L", {
-    scrollTrigger: {
-      trigger: ".R-L",
-      start: "center bottom",
-      // scroller: ".smooth-scroll",
-    }, 
-    ease: Expo.easeInOut,
-    x: 50,
-    opacity: 0,
-    duration:1.5,
-});  
+// gsap.from(".L-R", {
+// 	scrollTrigger: {
+// 	  trigger: ".L-R",
+//     start: "center bottom",
+//     // scroller: ".smooth-scroll",
+// 	}, 
+//   ease: Expo.easeInOut,
+// 	x: -50,
+// 	opacity: 0,
+// 	duration:1.5,
+//   });
+
+// gsap.from(".R-L", {
+//     scrollTrigger: {
+//       trigger: ".R-L",
+//       start: "center bottom",
+//       // scroller: ".smooth-scroll",
+//     }, 
+//     ease: Expo.easeInOut,
+//     x: 50,
+//     opacity: 0,
+//     duration:1.5,
+// });  
 
 
 // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -331,3 +331,28 @@ gsap.from(".R-L", {
 //       });
 //   });
 // });
+
+window.sr= ScrollReveal();
+
+sr.reveal('.heading_animate', { 
+  duration:1500,
+  distance:'100px',
+  origin:'top',
+  opacity: 0,
+});
+
+sr.reveal('.L-R', { 
+  delay: 500,
+  duration:1500,
+  distance:'100px',
+  origin:'left',
+  opacity: 0,
+});
+
+sr.reveal('.R-L', {
+  delay: 500, 
+  duration:1500,
+  distance:'100px',
+  origin:'right',
+  opacity: 0,
+});
