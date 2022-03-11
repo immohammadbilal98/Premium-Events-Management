@@ -139,36 +139,6 @@ tl.fromTo(slider, 4.5, { x: "0%" }, { x: "-100%", ease: Power3.easeInOut }, "+=1
 // });  
 
 
-// gsap.from(".nav-one", {
-//   scrollTrigger: {
-//     trigger: ".nav-one"
-//   }, 
-//   x: -50,
-//   opacity: 0,
-//   duration:5,
-//   delay:5
-//   });
-
-// gsap.from(".nav-one", {
-//   scrollTrigger: {
-//     trigger: ".nav-one"
-//   }, 
-//   x: -50,
-//   opacity: 0,
-//   duration:5,
-//   delay:5
-//   });
-
-// gsap.from(".nav-one", {
-//   scrollTrigger: {
-//     trigger: ".nav-one"
-//   }, 
-//   x: -50,
-//   opacity: 0,
-//   duration:5,
-//   delay:5
-//   });
-
 
 
 
