@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap@5.0.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+     
+    
+    <!-- Animation.css -->  
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+  
+    <!-- CSS File -->
+    <link rel="stylesheet" href="/css/styles.css"/>
+    
+    <!-- FONT STYLES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+   
+    <!-- JQUERY File -->
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+      <!-- Scroll Reveal -->
+      <script src="https://unpkg.com/scrollreveal"></script> 
+      
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script> -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="image/pem-logo-2.png">
+
+    <!-- Title -->
+    <title>Premium Events Management</title> 
+  </head>
+  <body id="my-scrollbar">
+    <main>
+    <header id="Navigation">
+      <!-- NavBar -->
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <!-- LEFT -->
+            <ul class="nav">
+               <a href="#navigation" class="nav-trigger">
+                 <span></span>
+               </a>           
+               <div class="nav-container">            
+                 <ul class="navv font-offcanvas nav-offcanvas">
+                   <li><a class="nav-offcanvas" href="/" onclick="location.href = '/'">HOME</a></li>
+                   <li><a class="nav-offcanvas" href="/#About" onclick="About_Nav(this)">ABOUT</a></li>
+                   <li><a class="nav-offcanvas" href="/#Concept" onclick="Concept_Nav(this)">CONCEPTS</a></li>
+                   <li><a class="nav-offcanvas" href="/">MEDIA</a></li>
+                   <li><a class="nav-offcanvas" href="/careers" onclick="location.href = '/careers'">CAREERS</a></li>
+                   <li><a class="nav-offcanvas" href="/#Contact" onclick="Contact_Nav(this)">CONTACT</a></li>
+                 </ul>
+               </div>    
+               <div class="overlay"></div> 
+            </ul>
+            <!-- CENTER -->
+            <ul class="nav justify-content-between">
+                <a class="navbar-brand me-0" href="/">
+                  <img src="/image/logos-sm.png" alt="">
+                </a>
+            </ul>
+            <!-- RIGHT-->
+            <ul class="nav justify-content-end">
+                <div class="grid-container-icon grid-container-all">
+                      <div class="grid-item">
+                        <a href="https://www.facebook.com/Premium-Events-Management-111872551406806"><img src="/image/icon/fb-gd.png" class="social-icon logo" alt=""></a>
+                      </div>
+                      <div class="grid-item">
+                        <a href="https://www.instagram.com/premiumeventsmanagement/?fbclid=IwAR2Rfd9hEBo6ZesgV_XdTFTuk39hna6XpLqAEJI9M74hh10yldXJmn4Fmp8"><img src="/image/icon/insta-gd.png" class="social-icon logo" alt=""></a>
+                      </div>
+                      <div class="grid-item">
+                        <a href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln-gd.png" class="social-icon logo" alt=""></a>
+                      </div>
+                    </div>
+            </ul>
+          </div>
+        </nav>
+        <div>
+          <div class="grid-container-icon grid-container-mobile">
+            <div class="grid-item">
+              <a href="https://www.facebook.com/Premium-Events-Management-111872551406806"><img src="/image/icon/fb-gd.png" class="social-icon logo" alt=""></a>
+            </div>
+            <div class="grid-item">
+              <a href="https://www.instagram.com/premiumeventsmanagement/?fbclid=IwAR2Rfd9hEBo6ZesgV_XdTFTuk39hna6XpLqAEJI9M74hh10yldXJmn4Fmp8"><img src="/image/icon/insta-gd.png" class="social-icon logo" alt=""></a>
+            </div>
+            <div class="grid-item">
+              <a href="https://www.linkedin.com/company/premiumeventsmanagement/"><img src="/image/icon/ln-gd.png" class="social-icon logo" alt=""></a>
+            </div>
+          </div>
+        </div>
+   </header> 
