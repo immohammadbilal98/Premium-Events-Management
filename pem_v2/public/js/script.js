@@ -326,3 +326,22 @@ sr.reveal('.R-L', {
   origin:'right',
   opacity: 0,
 });
+
+
+
+const liquifyTrigger = document.querySelector('.liquify');
+const controller = new ScrollMagic.Controller();
+ 
+const sceneAuthorLiquid = new ScrollMagic.Scene({
+    triggerElement: liquifyTrigger,
+    triggerHook: 'onEnter',
+  })
+  .setTween('#liquid', 8, {
+    attr: {
+      scale: '0'
+    },
+    ease: Power4.easeOut,
+    delay: 1,
+  })
+  .reverse(false)
+  .addTo(controller);
