@@ -302,7 +302,7 @@ header
   height: 17vh;
   width: 100%;
   position: absolute;
-  background: #000000;
+  background: rgb(0 0 0 / 62%);
   z-index: 500;
   font-weight: 700;
 }
@@ -712,7 +712,7 @@ transform: rotate(45deg) translate(-6px, -6px);
 
 
 .card-main, .card-img-main{
-  height: 81vh;
+  height: 100vh;
 }
 
 .card-img-overlay{
@@ -756,7 +756,7 @@ transform: rotate(45deg) translate(-6px, -6px);
 
 .svg-img{
 	width :100%;
-	height :81vh;
+	height :100vh;
 	filter :url('#liquify');
 	opacity :0;
 	transform :translateY(50px);
@@ -774,7 +774,7 @@ transform: rotate(45deg) translate(-6px, -6px);
 	}
 }
 
-svg{
+#Main-svg{
 	position: absolute;
   transition-duration: 50s;
 }  
@@ -801,7 +801,7 @@ svg{
     to { -moz-transform:rotate(360deg); -moz-transform-origin: 50% 50%; } 
     } */
 
-.circle-logo{
+/* .circle-logo{
   position: relative;
   animation: rotation 90s linear infinite;
   -webkit-transform-origin: 50% 50%;
@@ -811,7 +811,7 @@ svg{
   from { -webkit-transform:rotate(0deg);  -webkit-transform-origin: 50% 50%; } 
   to { -webkit-transform:rotate(360deg);  -webkit-transform-origin: 50% 50%; } 
 }
-    
+     */
 
 /* .dot-logo{
   -webkit-animation-iteration-count:infinite;
@@ -834,13 +834,160 @@ svg{
   } */
 
 
+
+
+  .s-logo{
+    position: relative;
+    width: 7vw;
+    top: 20.6rem;
+    animation: s-logo-animation 5s ;
+  }
+
+  /* @keyframes s-logo-animation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  } */
+/* --------------------------------- */
+
   .dot-logo{
     position: relative;
-    animation: rotation-r 90s linear infinite;
-    -webkit-transform-origin: 50% 50%;
+    animation-name: rotation-r;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    /* -webkit-transform-origin: 50% 50%; */
+    width: 13vw;
+    top:174px;
   }
   
   @-webkit-keyframes rotation-r {
-    from { -webkit-transform:rotate(0deg);  -webkit-transform-origin: 50% 50%; } 
-    to { -webkit-transform:rotate(-360deg);  -webkit-transform-origin: 50% 50%; } 
+    from { -webkit-transform:rotate(-360deg);  -webkit-transform-origin: 50% 50%; width: 0vw;} 
+    to { -webkit-transform:rotate(0deg);  -webkit-transform-origin: 50% 50%; width: 13vw;} 
   }
+/* ---------------------------------- */
+
+  .circle-logo{
+    position: relative;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    /* -webkit-transform-origin: 50% 50%; */
+    width: 40vw;
+    bottom: 12rem;
+  }
+  
+  @-webkit-keyframes rotation {
+    from { -webkit-transform:rotate(360deg);  -webkit-transform-origin: 50% 50%; width: 0vw;} 
+    to { -webkit-transform:rotate(00deg);  -webkit-transform-origin: 50% 50%; width:40vw} 
+  }
+
+
+
+
+.main-banner{
+  position: absolute;
+}
+
+/* .main-inside-banner{
+  position: relative;
+} */
+
+
+#Main {
+  position: relative;
+  height: 100vh;
+  color: #fff;
+  background-attachment: fixed;
+  
+}
+
+.video{
+
+}
+
+/* Video Main */
+.container-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("./assets/bg.jpg") no-repeat center center/cover;
+  /* z-index: -1; */
+}
+
+/* .container-video:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 114.5%;
+  background: rgba(0, 0, 0, 45%);
+} */
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Left-Heading Inside Main   */
+.heading-main-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+}  
+
+/* Home-Icon */
+.home-icon{
+  width: 25px;
+}
+
+/* Mouse Scroll Animation */
+
+.scroll-downs {
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  left: 0;
+  margin: auto;    
+  width :34px;
+  height: 55px;
+  z-index: 1;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #ffc107;;
+  background-color: #000000;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+  z-index: 1;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}

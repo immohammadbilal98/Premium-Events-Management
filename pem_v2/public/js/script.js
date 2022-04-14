@@ -100,12 +100,12 @@ const navbar = document.querySelector(".nav-list");
 const navigation = document.querySelector("#Navigation");
 
 const tl = new TimelineMax();
-// tl.fromTo(slider, 4.5, { x: "0%" }, { x: "-100%", ease: Power3.easeInOut }, "+=1.2")
+tl.fromTo(slider, 4.5, { y: "0%" }, { y: "-100%", ease: Power3.easeInOut }, "+=4.2")
   // .fromTo(logo, 1, { opacity: 0, x: 300}, { opacity: 1, x: 0 }, "-=0.5")
   // .fromTo(navbar,2, {opacity:0, x:-100} , {opacity:1, x:0},"-=0.5" )
 //   .fromTo(navigation,1.5,{opacity:0} , {opacity:1},"-=0.5" )
 
-// tl.fromTo(circle_logo, 4.5, { rotation: "360" }, { rotation: "0", ease: Power3.easeInOut }, "+=1")
+// tl.fromTo(circle_logo, 5, { rotation: "360", }, { rotation: "0", ease: Power3.easeInOut }, "+=.1")
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -345,7 +345,16 @@ const sceneAuthorLiquid = new ScrollMagic.Scene({
       scale: '0'
     },
     ease: Power4.easeOut,
-    delay: 1,
+    delay: 5,
   })
   .reverse(false)
   .addTo(controller);
+
+
+  var animation = bodymovin.loadAnimation({
+    container: document.querySelector('#Slider-lottie'), // Required
+    path: '/ae/data.json', // Required
+    renderer: 'svg', // Required
+    autoplay: true, // Optional
+    name: "Hello World", // Name for future reference. Optional.
+  })
