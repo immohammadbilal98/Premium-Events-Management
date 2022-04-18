@@ -115,7 +115,7 @@ html {
 /* PARALLAX */
 .parallax{
   background-attachment: fixed;
-  background-image: url("/image/career-bg.jpg");
+  background-image: url("/image/career-bg-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -478,7 +478,10 @@ transform: rotate(45deg) translate(-6px, -6px);
 /* CONCEPT---------------------------- */
 
 #Concept{
-  background-color: #000000;
+  background-image: url("/image/concept-bg-4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* #8c8c7b80 */
 /* DEMO GENERAL ============================== */
@@ -933,4 +936,30 @@ transform: rotate(45deg) translate(-6px, -6px);
   box-shadow: 0px 0px 20px 0px rgb(255 255 255 / 43%);
 -webkit-box-shadow: 0px 0px 20px 0px rgb(255 255 255 / 43%);
 -moz-box-shadow: 0px 0px 20px 0px rgb(255 255 255 / 43%);
+}
+
+
+
+
+
+.circle-L,.circle-R{
+  width: 12vw;
+}
+
+.feature-banner-circle{
+  position: relative;
+}
+
+.feature-banner-circle .circle-left{
+  position: absolute;
+  transform-origin: top left;
+  left: 0;
+  top: -10.2rem;
+}
+
+.feature-banner-circle .circle-right{
+  position: absolute;
+  transform-origin: top right;
+  right: 0;
+  top: -10.2rem;
 }
