@@ -9,8 +9,17 @@
 
 body{
   overflow-x: hidden;
-  font-family: 'Quattrocento', serif;
+  /* font-family: 'Quattrocento', serif; */
+  /* font-family: 'Inknut Antiqua', serif; */ 
+  /* font-family: 'Playfair Display', serif; */
+  /* font-family: 'Cinzel Decorative', cursive; */
+  font-family: 'Spectral', serif;
 }
+
+/* p,h1,h2,h3,h4,h5{
+  font-family: 'Inknut Antiqua', serif;
+  font-family: 'Quattrocento', serif;
+} */
 
 html {
   box-sizing: border-box;
@@ -117,7 +126,7 @@ html {
 /* PARALLAX */
 .parallax{
   background-attachment: fixed;
-  background-image: url("/image/career-bg-1.jpg");
+  background-image: url("/image/career-bg-2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -139,7 +148,7 @@ html {
 } */
 
 .nav-trigger {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   top: 45px;
   /* left: 40px; */
@@ -454,10 +463,11 @@ transform: rotate(45deg) translate(-6px, -6px);
 
 /* ABOUT ---------------------------- */
 #About{
-  background-image: url("/image/about-bg-2.jpg");  
+  /* background-image: url("/image/about-bg-4.jpg");  
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: #000000;
 }
 
 /* #About::after{
@@ -622,7 +632,7 @@ transform: rotate(45deg) translate(-6px, -6px);
 
 /* Contact ---------------------------*/
 .form-control{
-  background-color: #8c8c7b80;
+  /* background-color: #8c8c7b80; */
   border-radius: 0%;
 }
 
@@ -1010,4 +1020,23 @@ transform: rotate(45deg) translate(-6px, -6px);
   border-radius: 3rem;
   /* border: 1px solid #99651f; */
   padding: 21px;
+}
+
+
+
+/* #Contact{
+  background-image: url("/image/footer-bg-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+
+.form-control{
+  border-left: 0px solid #ced4da;
+  border-right: 0px solid #ced4da;
+  border-top: 0px solid #ced4da;
+  border-bottom: 1px solid #ced4da;
+  background-color: #8c8c7b00;
+  width: 86%;
 }
