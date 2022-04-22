@@ -365,6 +365,7 @@ const sceneAuthorLiquid = new ScrollMagic.Scene({
 
 const cursor = document.querySelector('#cursor');
 const cursorCircle = cursor.querySelector('.cursor__circle');
+const cursorCircle_2 = cursor.querySelector('.cursor__circle_2');
 
 const mouse = { x: -100, y: -100 }; // mouse pointer's coordinates
 const pos = { x: 0, y: 0 }; // cursor's coordinates
@@ -408,6 +409,8 @@ const updateCursor = () => {
 
   cursor.style.transform = translate;
   cursorCircle.style.transform = rotate + scale;
+  cursorCircle_2.style.transform = rotate + scale;
+  
 };
 
 function loop() {
