@@ -75,6 +75,7 @@ html {
     position: absolute;
     bottom: 15px;
     left: 50%;
+    z-index: 1;
     /* transform: translate(-50%,-50%); */
 }
 .arrow span{
